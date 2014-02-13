@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1392079937 source:/home/sabotai/documents/masteringTedium/Mastering Tedium/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<cctype>
+
