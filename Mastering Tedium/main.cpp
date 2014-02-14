@@ -1,207 +1,226 @@
 #include <iostream>
 #include <string>
-#include <vector>  // For the command handling function.
-#include <cctype>  // Will be used to eliminate case sensitivity problems.
+#include <vector>
+#include <cctype>
+#include <ctime>
+#include <sstream> //to use stringstream to combine int and string for the day count
 
 using namespace std;
 
-// -------------------------------------------------------------------------------------------------
 
-void section_command(string Cmd, string &wd1, string &wd2)
-{
-    string sub_str;
-    vector<string> words;
-    char search = ' ';
-    size_t i, j;
-
-    // Split Command into vector
-    for(i = 0; i < Cmd.size(); i++)
-    {
-        if(Cmd.at(i) != search)
-        {
-            sub_str.insert(sub_str.end(), Cmd.at(i));
-        }
-        if(i == Cmd.size() - 1)
-        {
-            words.push_back(sub_str);
-            sub_str.clear();
-        }
-        if(Cmd.at(i) == search)
-        {
-            words.push_back(sub_str);
-            sub_str.clear();
-        }
-    }
-    // Clear out any blanks
-    // I work backwords through the vectors here as a cheat not to invaldate the iterator
-    for(i = words.size() - 1; i > 0; i--)
-    {
-        if(words.at(i) == "")
-        {
-            words.erase(words.begin() + i);
-        }
-    }
-    // Make words upper case
-    // Right here is where the functions from cctype are used
-    for(i = 0; i < words.size(); i++)
-    {
-        for(j = 0; j < words.at(i).size(); j++)
-        {
-            if(islower(words.at(i).at(j)))
-            {
-                words.at(i).at(j) = toupper(words.at(i).at(j));
-            }
-        }
-    }
-    // Very simple. For the moment I only want the first to words at most (verb / noun).
-    if(words.size() == 0)
-    {
-        cout << "No command given" << endl;
-    }
-    if(words.size() == 1)
-    {
-        wd1 = words.at(0);
-    }
-    if(words.size() == 2)
-    {
-        wd1 = words.at(0);
-        wd2 = words.at(1);
-    }
-    if(words.size() > 2)
-    {
-        cout << "Command too long. Only type one or two words (direction or verb and noun)" << endl;
-    }
-}
-
-void menuDisplay(string command, string textLine1, string textLine2){
-            cout << endl;
-            cout << "o==============================================================================o"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||   "<< textLine1                                                      <<"   ||"<< endl;
-            cout << "||   "<< textLine2                                                      <<"   ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "oo----------------------------------------------------------------------------oo"<< endl;
-            cout << "     " << command << endl;
-            cout << endl;
-            cout << endl;
-            cout << "o==============================================================================o"<< endl;
-
-}
-
-// ----------------------------------------------------------------------------------------
-
-int main()
-{
-    int intro;
+    bool setup;
+    int gameState;
+    int dirtyScore;
+    int cleanScore;
+    int dayCount;
     string command;
     string word_1;
     string word_2;
     string textLine1, textLine2;
+    string currentText;
+    string textBuffer1, textBuffer2, textBuffer3, textBuffer4, textBuffer5;
+    bool newDay, firstDay;
+    stringstream dayDeclaration;
+    int laundryBasket;
+    int nagCount;
+    int actionCount;
 
-    while(word_1 != "QUIT") // I have provided an escape condition from the loop here
+
+void menuDisplay(string command, string _textBuffer1, string _textBuffer2, string _textBuffer3, string _textBuffer4, string _textBuffer5, int _dirtyScore, int _cleanScore){
+            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
+            cout << ":::                                                                          :::"<< endl;
+            cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<< endl;
+            cout << ":::                                                                          :::"<< endl;
+            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
+            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
+            cout << "::                                                                            ::"<< endl;
+            cout << ":                                                                              :"<< endl;
+            cout << "     "<< _textBuffer1                                                   <<"     "<< endl;
+            cout << "     "<< _textBuffer2                                                   <<"     "<< endl;
+            cout << "     "<< _textBuffer3                                                   <<"     "<< endl;
+            cout << "     "<< _textBuffer4                                                   <<"     "<< endl;
+            cout << "     "<< _textBuffer5                                                   <<"     "<< endl;
+            cout << "                                                                                "<< endl;
+            cout << ":                                                                              :"<< endl;
+            cout << "::                                                                            ::"<< endl;
+            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
+            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
+            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
+            cout << ":::                                                                          :::"<< endl;
+            cout << "::                                                                            ::"<< endl;
+            cout << ":                                                                              :"<< endl;
+            cout << "                         " << command << endl;
+            //cout << endl;
+
+}
+
+void clearBuffer() {
+            dayDeclaration.str("");
+            textBuffer1.clear();
+            textBuffer2.clear();
+            textBuffer3.clear();
+            textBuffer4.clear();
+            textBuffer5.clear();
+}
+
+void fillBuffer() {
+        textBuffer1 = currentText.substr (0,70);
+        if (currentText.length()>70)
+            {textBuffer2 = currentText.substr (70,70);
+             if (currentText.length()>140) {
+                textBuffer3 = currentText.substr (140,70);
+                if (currentText.length()>210) {
+                    textBuffer4 = currentText.substr (210,70);
+                    if (currentText.length()>280) {
+                        textBuffer5 = currentText.substr (280,70);
+                        }
+                    }
+                }
+             }
+}
+
+
+
+
+int main()
+{
+
+
+    //if (setup){
+
+        gameState = 0;
+        dirtyScore = 32;
+        cleanScore = 0;
+        newDay = true;
+        firstDay = true;
+        setup = false;
+
+        nagCount = 0;
+    //}
+
+    while( true )
     {
         command.clear();
 
 
-        if (intro < 1) {
+        if (gameState < 1) {
 
-            cout << "   ooo   ooo    o     ooo   ooooo  ooooo  oooo   ooooo  o   o   ooo             "<< endl;
-            cout << "   oo ooo oo   o o   o        o    oo     o   o    o    oo  o  o   o            "<< endl;
-            cout << "   oo  o  oo  ooooo   ooo     o    ooooo  oooo     o    o o o  o                "<< endl;
-            cout << "   oo     oo  o   o      o    o    oo     o  o     o    o  oo  o ooo            "<< endl;
-            cout << "   oo     oo  o   o   ooo     o    ooooo  o   o  ooooo  o   o   ooo             "<< endl;
             cout << "                                                                                "<< endl;
-            cout << "   ooooo  ooooo  ooo    ooooo  o   o  o   o      hdmmmyyyyyh////smmmms          "<< endl;
-            cout << "     o    oo     o  o     o    o   o  oo oo      smmmmhhyhhdysyyymmmmo          "<< endl;
-            cout << "     o    ooooo  o   o    o    o   o  o o o     ymMMMMMMMMMMMMMMMMMMMNy         "<< endl;
-            cout << "     o    oo     o  o     o    o   o  o   o    odmmmmmmmmmmmmmmmmmmmmmmo        "<< endl;
-            cout << "     o    ooooo  ooo    ooooo   ooo   o   o    hMMMMMMMMMMMMMMMMMMMMMMMh        "<< endl;
-            cout << "                                               hMMMMMMmddddmdddddMMMMMMh        "<< endl;
-            cout << "                                               hMMMMddNdo:...:odMddMMMMh        "<< endl;
-            cout << "     A LAUNDRY SIMULATOR                       hMMMhNm:    `    -mNyMMMh        "<< endl;
-            cout << "     by Alec McClure                           hMMdmM.  `yNMNh.  .NNhMMh        "<< endl;
-            cout << "                                               hMMyMm   +MMMMMs   dMyMMh        "<< endl;
-            cout << "                                               hMMddM-  `sNMNy.  .MNhMMh        "<< endl;
-            cout << "                                               hMMMhmN/         :mNyMMMh        "<< endl;
-            cout << "                                               hMMMMddNms/---/omMddMMMMh        "<< endl;
-            cout << "                                               hMMMMMMmdddmmmddddMMMMMMh        "<< endl;
-            cout << "                                               hMMMMMMMMMMMMMMMMMMMMMMMh        "<< endl;
-            cout << "     PRESS ENTER TO CONTINUE                   ymmmmmmmmmmmmmmmmmmmmmmmy        "<< endl;
-            cout << "                                               ymmmmmmmmmmmmmmmmmmmmmmmy        "<< endl;
+            cout << "  ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██╗███╗   ██╗ ██████╗     "<< endl;
+            cout << "  ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗  ██║██╔════╝     "<< endl;
+            cout << "  ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝██║██╔██╗ ██║██║  ███╗    "<< endl;
+            cout << "  ██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗██║██║╚██╗██║██║   ██║    "<< endl;
+            cout << "  ██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║██║██║ ╚████║╚██████╔╝    "<< endl;
+            cout << "  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝     "<< endl;
+            cout << "  ████████╗███████╗██████╗ ██╗██╗   ██╗███╗   ███╗    hdmmmyyyyyh////smmmms     "<< endl;
+            cout << "  ╚══██╔══╝██╔════╝██╔══██╗██║██║   ██║████╗ ████║    smmmmhhyhhdysyyymmmmo     "<< endl;
+            cout << "     ██║   █████╗  ██║  ██║██║██║   ██║██╔████╔██║   ymMMMMMMMMMMMMMMMMMMMNy    "<< endl;
+            cout << "     ██║   ██╔══╝  ██║  ██║██║██║   ██║██║╚██╔╝██║  odmmmmmmmmmmmmmmmmmmmmmmo   "<< endl;
+            cout << "     ██║   ███████╗██████╔╝██║╚██████╔╝██║ ╚═╝ ██║  hMMMMMMMMMMMMMMMMMMMMMMMh   "<< endl;
+            cout << "     ╚═╝   ╚══════╝╚═════╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝  hMMMMMMmddddmdddddMMMMMMh   "<< endl;
+            cout << "         ______________________                     hMMMMddNdo:...:odMddMMMMh   "<< endl;
+            cout << "        [                      ]                    hMMMhNm:    `    -mNyMMMh   "<< endl;
+            cout << "        |  A LAUNDRY SIMULATOR |                    hMMdmM.  `yNMNh.  .NNhMMh   "<< endl;
+            cout << "        |  by Alec McClure     |                    hMMyMm   +MMMMMs   dMyMMh   "<< endl;
+            cout << "        [______________________]                    hMMddM-  `sNMNy.  .MNhMMh   "<< endl;
+            cout << "         ----------------------                     hMMMhmN/         :mNyMMMh   "<< endl;
+            cout << "         ----------------------                     hMMMMddNms/---/omMddMMMMh   "<< endl;
+            cout << "                                                    hMMMMMMmdddmmmddddMMMMMMh   "<< endl;
+            cout << "        -------------------------                   hMMMMMMMMMMMMMMMMMMMMMMMh   "<< endl;
+            cout << "       < PRESS ENTER TO CONTINUE >                  ymmmmmmmmmmmmmmmmmmmmmmmy   "<< endl;
+            cout << "        -------------------------                   ymmmmmmmmmmmmmmmmmmmmmmmy   ";
 
-            intro++;
-        }
-        cin.ignore();
 
-        textLine1 =        "You find yourself in the deepest, darkest and filthiest of bedrooms,  ";
-        textLine2 =        "covered in soiled clothing.  To launder or not to launder?            ";
 
-        if (intro > 0){
-            //for (int i = 0; i++; i < 23) {
-            cout << "o==============================================================================o"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||   "<< textLine1                                                      <<"   ||"<< endl;
-            cout << "||   "<< textLine2                                                      <<"   ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "||                                                                            ||"<< endl;
-            cout << "oo----------------------------------------------------------------------------oo"<< endl;
-            cout << "     " << command << endl;
+            cin.ignore();
             cout << endl;
-            cout << endl;
-            cout << "o==============================================================================o"<< endl;
+            gameState = 1;
         }
-        //getline(cin, command);
-        //if ( command ==
-        /*cin.ignore();
-        cout << "Valid Commands:" << endl;
-        cout << "help: list valid commands  " << endl;
-        cout << "score: list valid commands  " << endl;
-        cout << "help: list valid commands  " << endl;
-*/
-        cout << "What shall I do?  ";
-        getline(cin, command);
-        menuDisplay(command, textLine1, textLine2);
-        command.clear();
-       /* cout << "Your raw command was " << command << endl;
 
-        word_1.clear();
-        word_2.clear();
+        clearBuffer();
 
-        // Call the function that handles the command line format.
-        section_command(command, word_1, word_2);
-
-        // For test purposes, output the command after formatting by the function.
-        if(word_1.size() > 0)
-        {
-            cout << word_1 << " " << word_2 << endl;
+        if (actionCount > 4) {
+            newDay = true;
+            actionCount = 0;
         }
-        cout << endl;
-        */
+        if (newDay){
+            dayCount += 1;
+            dayDeclaration << "DAY " << dayCount;
+            textBuffer1 = dayDeclaration.str();
+            textBuffer3 = "--PRESS ENTER--";
+            menuDisplay(command, textBuffer1, textBuffer2,textBuffer3, textBuffer4, textBuffer5, dirtyScore,cleanScore);
+            //cout << "test";
+            getline(cin,command);
+            //cin.ignore();
+
+            clearBuffer();
+
+            if (firstDay){
+                currentText = "You awake in a dark and filthy room. The air reeks of stale beer and you feel the crunch of forgotten potato chips beneath your feet.  The evening light slipping through the sole window illuminates the room just enough to highlight the soiled clothing surrounding you. This is your bedroom. What does this day hold? Is it *laundry*?";
+            } else {
+                currentText = "You once again awake in this disheveled mess of a room surrounded by filthy clothes.";
+            }
+            fillBuffer();
+            firstDay = false;
+            newDay = false;
+            menuDisplay(command, textBuffer1, textBuffer2, textBuffer3, textBuffer4, textBuffer5, dirtyScore, cleanScore);
+
+        }
+
+
+        if (gameState == 1){ //game state 2 is at home
+            cout << "     What shall you do?  ";
+            getline(cin, command);
+            if (command == ""){
+                currentText += "...";
+                actionCount += 1;}
+            else if (command == "laundry" || command == "do laundry") {
+                currentText =       "Slow down partner.  If you want to do laundry, you'll have to *gather up some laundry*";}
+            else if (command == "gather up some laundry") {
+                currentText =       "You throw an old sock into your basket.";
+                laundryBasket +=1;}
+            else if (command == "no") {
+                currentText =       "What do you mean no?";
+                actionCount +=2;}
+            else if (command == "yes") {
+                currentText =       "I'm glad you're finally cooperating.  Are you trying to say you want to do *laundry*?";
+                actionCount +=2;}
+            else if (command == "help") {
+                currentText =       "There's this expression.  \"Every man is an island\" or something like that.  I think that's how it goes.";
+                actionCount += 2;}
+            else {
+                if (nagCount == 0) {
+                    currentText =       "Are you sure you don't want to do *laundry*?";
+                    actionCount +=1;}
+                else if (nagCount == 1) {
+                    currentText =       "Are you sure you don't want to do *laundry*???";
+                    actionCount +=1;}
+                else if (nagCount == 2) {
+                    currentText =       "Society looks down upon the various body odors emanating from your dirty clothing.  Are you sure you don't want to do *laundry*?";
+                    actionCount +=1;}
+                else if (nagCount == 3) {
+                    currentText =       "Not doing laundry just caused you to lose 3 casual friends, but they were'nt that interesting anyways.  You can always do *laundry* to attract new ones.";
+                    actionCount +=1;}
+                else if (nagCount == 4) {
+                    currentText =       "Your once loyal pet cat no longer cuddles in your lap or comes within 10 feet of your malodorous room.  Are you sure you don't want to do *laundry*?";
+                    actionCount +=1;}
+                else if (nagCount == 5) {
+                    currentText =       "You notice considerable mildew growth on the underside of one of the smaller piles of clothing.  Are you sure you don't want to do *laundry*?";
+                    actionCount +=1;}
+                else if (nagCount > 5) {
+                    currentText =       "The putrid smell drifting into the common hallway of your apartment building causes both of your neighbors who have never met to knock on the door and ask \"Are you dead or do you just need to do *laundry*?\"";
+                    actionCount +=1;
+                    nagCount = 0;}
+
+                nagCount += 1;
+            }
+
+        }
+
+        clearBuffer();
+        fillBuffer();
+
+        menuDisplay(command, textBuffer1, textBuffer2, textBuffer3, textBuffer4, textBuffer5, dirtyScore, cleanScore);
     }
     return 0;
 }
