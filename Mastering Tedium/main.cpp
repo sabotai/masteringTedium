@@ -27,6 +27,7 @@ using namespace std;
 
 
 void menuDisplay(string command, string _textBuffer1, string _textBuffer2, string _textBuffer3, string _textBuffer4, string _textBuffer5, int _dirtyScore, int _cleanScore){
+<<<<<<< HEAD
 
     if (newDay && dayCount > 1) {
             cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<< endl;
@@ -57,6 +58,8 @@ void menuDisplay(string command, string _textBuffer1, string _textBuffer2, strin
 
     else {
         if (gameState == 1) {
+=======
+>>>>>>> b6231b12ed271d7bd6928df0219599da73781f4e
             cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
             cout << ":::                                                                          :::"<< endl;
             cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<< endl;
@@ -74,11 +77,16 @@ void menuDisplay(string command, string _textBuffer1, string _textBuffer2, strin
             cout << ":                                                                              :"<< endl;
             cout << "::                                                                            ::"<< endl;
             cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
+<<<<<<< HEAD
             cout << "::::::::::::::::::::::::::::::::::::  HOME  ::::::::::::::::::::::::::::::::::::"<< endl;
+=======
+            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
+>>>>>>> b6231b12ed271d7bd6928df0219599da73781f4e
             cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
             cout << ":::                                                                          :::"<< endl;
             cout << "::                                                                            ::"<< endl;
             cout << ":                                                                              :"<< endl;
+<<<<<<< HEAD
             cout << "                         " << command << endl;}
 
         if (gameState == 2){}
@@ -132,6 +140,10 @@ void menuDisplay(string command, string _textBuffer1, string _textBuffer2, strin
             cout << "                         " << command << endl;}
 
 
+=======
+            cout << "                         " << command << endl;
+            //cout << endl;
+>>>>>>> b6231b12ed271d7bd6928df0219599da73781f4e
 
 }
 
@@ -219,6 +231,7 @@ int main()
         }
 
         clearBuffer();
+<<<<<<< HEAD
 
         if (actionCount > 4) {
             newDay = true;
@@ -245,6 +258,18 @@ int main()
                     textBuffer2 += "All your clothes are now dirty.";}
             }
             textBuffer4 = "--PRESS ENTER--";
+=======
+
+        if (actionCount > 4) {
+            newDay = true;
+            actionCount = 0;
+        }
+        if (newDay){
+            dayCount += 1;
+            dayDeclaration << "DAY " << dayCount;
+            textBuffer1 = dayDeclaration.str();
+            textBuffer3 = "--PRESS ENTER--";
+>>>>>>> b6231b12ed271d7bd6928df0219599da73781f4e
             menuDisplay(command, textBuffer1, textBuffer2,textBuffer3, textBuffer4, textBuffer5, dirtyScore,cleanScore);
             //cout << "test";
             getline(cin,command);

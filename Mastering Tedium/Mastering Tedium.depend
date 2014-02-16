@@ -5,7 +5,11 @@
 	<vector>
 	<cctype>
 
+<<<<<<< HEAD
 1392518187 source:/home/sabotai/git/masteringTedium/Mastering Tedium/main.cpp
+=======
+1392335901 source:/home/sabotai/git/masteringTedium/Mastering Tedium/main.cpp
+>>>>>>> b6231b12ed271d7bd6928df0219599da73781f4e
 	<iostream>
 	<string>
 	<vector>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="312" topLine="15" />
+=======
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6209" topLine="111" />
+>>>>>>> b6231b12ed271d7bd6928df0219599da73781f4e
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
