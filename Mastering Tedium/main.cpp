@@ -194,7 +194,7 @@ int main()
         if (gameState == -1) {
          cout << "***Mastering Tedium is meant to be played on a traditional 80 x 24 character terminal screen.  If this is not the case, the game will not display correctly and you may need to modify your terminal preferences or config file.  Press enter to begin.***" << endl;
          cin.ignore();
-         gameState = 3;
+         gameState = 0;
         }
 
         if (gameState == 0) {
@@ -320,6 +320,9 @@ int main()
             else if (command == "help") {
                 currentText =       "There's this expression.  \"Every man is an island\" or something like that.  I think that's how it goes.";
                 actionCount += 2;}
+            else if (command == "sleep" || command == "go to sleep") {
+                currentText =       "You ignore your mounting problems and try to sleep through the day.";
+                actionCount += 4;}
             else {
                 if (nagCount == 0) {
                     currentText =       "Are you sure you don't want to do \"laundry\"?";
@@ -418,23 +421,23 @@ int main()
                 currentText += "...";   }
             else {
                 if (posCount == 0) {
-                    if (command == "wash clothes" || "laundry" || "washer" || "washing machine" || "wash") { //correct action 1
+                    if (command == "wash clothes" || command == "laundry" || command == "washer" || command == "washing machine" || command == "wash") { //correct action 1
                         currentText = "You find the closest washing machine that doesn't look like it's going to break down.  Why don't you \"put your laundry in the machine\" ?";
-                        posCount +=1;   }
-                    else if ((command == "" || command == "" || command == "") && nagCount == 0){ //alternative action 1
+                        posCount += 1;   }
+                    /*else if ((command == "" || command == "" || command == "") && nagCount == 0){ //alternative action 1
                         currentText = "";
                         nagCount += 1;  }
                     else if ((command == "" || command == " " || command == "" || " ") && nagCount == 0) { //alternative action 2
                         currentText = "Aren't you here to \"wash clothes\" ?";
-                        nagCount += 1;  }
+                        nagCount += 1;  }*/
                     else {
                         currentText = "Aren't you here to \"wash clothes\" ?";   } //suggest correct action
                     }
 
                 else if (posCount == 1) {
-                    if (command == "put your laundry in the machine" || "put laundry in the machine") { //correct action 1
+                    if (command == "put your laundry in the machine" || command == "put laundry in the machine") { //correct action 1
                         currentText = "You throw some of your laundry in the machine.  You dropped one of the moldy socks.  You should \"put more laundry in the machine\"";
-                        posCount +=1;   }
+                        posCount += 1;   }
                     else if ((command == "" || command == "" || command == "") && nagCount == 0){ //alternative action 1
                         currentText = "";
                         nagCount += 1;  }
@@ -447,11 +450,11 @@ int main()
 
                 else if (posCount == 2 || posCount == 3) {
                     if (command == "put more laundry in the machine" ) { //correct action 1
-                        if (posCount == 2) {
+                        if (posCount += 1) {
                             currentText = "You throw more of your laundry in the machine and decide that the sock isn't worth saving. You rationalize this decision by considering it an anonymous gift to the laundromat's proprietors.  You should \"put more laundry in the machine\"";    }
                         else {
                             currentText = "You overload the machine with the last bit of filth just like the sign says not to.  It's time to \"start the machine\"";    }
-                        posCount +=1;   }
+                        posCount += 1;   }
                     else if ((command == "" || command == "" || command == "") && nagCount == 0){ //alternative action 1
                         currentText = "";
                         nagCount += 1;  }
@@ -473,51 +476,69 @@ int main()
                         currentText = "Aren't you here to \"wash clothes\" ?";
                         nagCount += 1;  }
                     else {
-                        currentText = "The machine is stupid and needs to be told to \"start\" .";   } //suggest correct action
+                        currentText = "The machine is stupid and needs to be told to \"start\" ";   } //suggest correct action
                     }
 
 
                 else if (posCount == 5){
-                    if (command == "check" || command == "check laundry" || command == "check washing machine"){
-                        currentText = "You check on your laundry.  It's still in the washing cycle.";
+                    if (command == "check" || command == "check laundry" || command == "check washing machine" || command == "laundry"){
+                        if (readCount == 0){
+                            currentText = "You check on your laundry.  It's still in the washing cycle.  How are you going to kill the time?  You did bring a \"book\""; }
+
+                        if (readCount == 1){
+                            currentText = "You check on your laundry.  It's in the rinse cycle.  How are you going to kill the time?  You did bring a \"book\""; }
+
+                        if (readCount == 2){
+                            currentText = "You check on your laundry.  It's  cycle.  How are you going to kill the time?  Why don't you keep \"reading\" ?"; }
+
+                        if (readCount == 3){
+                            currentText = "You check on your laundry.  It's still in the washing cycle.  How are you going to kill the time?  You did bring a \"book\""; }
+
+                        if (readCount > 3){
+                            currentText = "Ok, the washing machine is done with its business.";
+                            posCount +=1; }
                         }
-                    else if (command == "read" || command == "read a book" || command == "book"){
+                    else if (command == "read" || command == "read a book" || command == "book" || command == "reading"){
                         if (readCount == 0){
                             currentText = "You pull a book out of your bag that you've been reading for months.  -THE BOOK OF DISQUIET by Fernando Pessoa- Perhaps you'll \"read\" more?"; }
                         if (readCount == 1){
-                            currentText = "BOOK TEXT 1"; }
+                            currentText = "It is said that tedium is a disease of the idle or that it attacks only those who have nothing to do. But this ailment of the soul is in fact more subtle: it attacks people who are predisposed to it and those who work or who pretend they work (which in this case comes down to the same thing) are less apt to be spared than the truly idle.(continued)"; }
                         if (readCount == 2){
-                            currentText = "BOOK TEXT 2"; }
+                            currentText = "Nothing is worse than the contrast between the natural splendour of the inner life, with its natural Indias and its unexplored lands and the squalor (even when it’s not really squalid) of life’s daily routine. And tedium is more oppressive when there’s not the excuse of idleness. The tedium of those who strive hard is the worst of all.(cont.)"; }
                         if (readCount == 3){
-                            currentText = "BOOK TEXT 3"; }
-                        readCount += 1;
-
-                    }
+                            currentText = "Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing worth doing. This means that the more there is to do, the more tedium one will feel. (continued)";  }
+                        if (readCount == 4){
+                            currentText = "How often, when I look up from the ledger where I enter amounts, my head is devoid of the whole world! I’d be better off remaining idle, doing nothing and having nothing to do, because that tedium, though real enough, I could at least enjoy. (continued)";}
+                        if (readCount == 5){
+                            currentText = "In my present tedium there is no rest, no nobility, and no well-being against which to feel unwell: there’s a vast effacement of every act I do, rather than a potential weariness from acts I’ll never do.";}
+                        readCount += 1; }
                     else if (command == "something") {
                         currentText = "You do \"something\" and have a great time or whatever."; }
+                    else if (command == "phone" || command == "smart phone" || command == "iphone") {
+                        currentText = "Your phone is dead.  Why didn't you charge it when you were home earlier?"; }
                     else {
-                        currentText = "Your laundry is still in the washing cycle.  Why don't you \"read a book\" or \"something\" ?";    }}
+                        currentText = "Your laundry is still washing.  Why don't you use your \"phone\", \"read a book\" or \"something\" ?";    }}
 
 
 
                 else if (posCount == 6){
-                     if (command == "advance" || command == "forward" || command == "go forward"){
-                        currentText = "You wonder why you didn't do laundry sooner as you adjust your grip to shift the weight.  You see the laundromat just ahead on the right.";
+                     if (command == "laundry" || command == "dryer" || command == "dry clothes" || command == "switch clothes"){
+                        currentText = "You promote your clean and wet clothes to the dryer and set it for 36 minutes.";
                         posCount += 1;}
                     else {
-                        currentText = "There are no paths to turn off from, so your only option is to push \"forward\"";    }}
+                        currentText = "Are you just going to let your wet clothes sit in the washing machine or move them to the \"dryer\" ?";    }}
 
 
 
                 else if (posCount >= 7){
-                     if (command == "right" || command == "go right" || command == "laundromat" || command == "go into the laundromat"){
-                       // currentText = "you done it";
+                     if (command == "wait" || command == "check"){
+                        if (posCount == 7) {
 
-                        //send to next gameState
-                        //posCount = 0;
+                        }
+
                         }
                     else {
-                        currentText = "Surely, you'd rather go to the laundromat on the \"right\"";    } }
+                        currentText = "There's nothing left to do, but \"wait\"";    } }
 
 
                 }
