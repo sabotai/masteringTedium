@@ -1,5 +1,5 @@
-/******************************************************************************
-*******************************************************************************
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
    ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██╗███╗   ██╗ ██████╗     
    ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗  ██║██╔════╝     
    ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝██║██╔██╗ ██║██║  ███╗    
@@ -11,10 +11,10 @@
 			╚══██╔══╝██╔════╝██╔══██╗██║██║   ██║████╗ ████║
 			   ██║   █████╗  ██║  ██║██║██║   ██║██╔████╔██║
 			   ██║   ██╔══╝  ██║  ██║██║██║   ██║██║╚██╔╝██║               
-****           ██║   ███████╗██████╔╝██║╚██████╔╝██║ ╚═╝ ██║               ****
-********       ╚═╝   ╚══════╝╚═════╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝           ********
-*******************************************************************************
-******************************************************************************/
+xxxx           ██║   ███████╗██████╔╝██║╚██████╔╝██║ ╚═╝ ██║               xxxx
+xxxxxxxx       ╚═╝   ╚══════╝╚═════╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝           xxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 	SYNOPSIS::
 
@@ -29,11 +29,19 @@ This project was born out my original brainstorming for a first project for this
 
 	--Excerpt from Fernando Pessoa's The Book of Disquiet--
 
-"It is said that tedium is a disease of the idle or that it attacks only those who have nothing to do. But this ailment of the soul is in fact more subtle: it attacks people who are predisposed to it and those who work or who pretend they work (which in this case comes down to the same thing) are less apt to be spared than the truly idle.
+>"It is said that tedium is a disease of the idle or that it attacks only those who have nothing to do. But 
+>this ailment of the soul is in fact more subtle: it attacks people who are predisposed to it and those who 
+>work or who pretend they work (which in this case comes down to the same thing) are less apt to be spared 
+>than the truly idle.
 
-Nothing is worse than the contrast between the natural splendour of the inner life, with its natural Indias and its unexplored lands and the squalor (even when it’s not really squalid) of life’s daily routine. And tedium is more oppressive when there’s not the excuse of idleness. The tedium of those who strive hard is the worst of all.
+>Nothing is worse than the contrast between the natural splendour of the inner life, with its natural Indias 
+>and its unexplored lands and the squalor (even when it’s not really squalid) of life’s daily routine. And 
+>tedium is more oppressive when there’s not the excuse of idleness. The tedium of those who strive hard is 
+>the worst of all.
 
-Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing worth doing. This means that the more there is to do, the more tedium one will feel. "
+>Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of 
+>feeling that there’s nothing worth doing. This means that the more there is to do, the more tedium one will 
+>feel. "
 
 3 Precedents for this project
 	1	The text-based adventure game is an older genre of games with a closed-caption system in place of graphics and user-input text for completing actions.
@@ -53,4 +61,3 @@ The game is broken up into the following stages:
 3	The Laundromat
 
 Once the game is completed, the player starts again from the beginning, their actions nullified by time and the social demands of personal hygiene. 
-
