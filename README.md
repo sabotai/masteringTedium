@@ -41,7 +41,7 @@ This project was born out my original brainstorming for a first project for this
 >feeling that there’s nothing worth doing. This means that the more there is to do, the more tedium one will 
 >feel. "
 
-#####Alternative explorations in this concept
+#####Alternative / related explorations
 
 -	Francis Alys is a Belgian conceptual artist.  One of his pieces, titled "Sometimes making something leads to nothing" is a video of him pushing a massive block of ice around Mexico City until the ice shrinks to the size of a golf ball and eventually vanishes.  Alys uses this as a theme for many of his pieces. http://www.youtube.com/watch?v=ZedESyQEnMA
 
