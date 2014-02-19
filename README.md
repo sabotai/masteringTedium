@@ -1,5 +1,3 @@
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 	███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██╗███╗   ██╗ ██████╗   
 	████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗  ██║██╔════╝   
@@ -8,15 +6,13 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 	██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║██║██║ ╚████║╚██████╔╝  
 	╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝     
                                                                                
-			████████╗███████╗██████╗ ██╗██╗   ██╗███╗   ███╗
-			╚══██╔══╝██╔════╝██╔══██╗██║██║   ██║████╗ ████║
-			   ██║   █████╗  ██║  ██║██║██║   ██║██╔████╔██║
-			   ██║   ██╔══╝  ██║  ██║██║██║   ██║██║╚██╔╝██║
-			   ██║   ███████╗██████╔╝██║╚██████╔╝██║ ╚═╝ ██║                   
-			   ╚═╝   ╚══════╝╚═════╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝                   
+		████████╗███████╗██████╗ ██╗██╗   ██╗███╗   ███╗
+		╚══██╔══╝██╔════╝██╔══██╗██║██║   ██║████╗ ████║
+		   ██║   █████╗  ██║  ██║██║██║   ██║██╔████╔██║
+		   ██║   ██╔══╝  ██║  ██║██║██║   ██║██║╚██╔╝██║
+		   ██║   ███████╗██████╔╝██║╚██████╔╝██║ ╚═╝ ██║                   
+		   ╚═╝   ╚══════╝╚═════╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝                   
 			   
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 	SYNOPSIS::
 
