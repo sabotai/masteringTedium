@@ -1,16 +1,16 @@
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-   ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██╗███╗   ██╗ ██████╗     
-   ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗  ██║██╔════╝     
-   ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝██║██╔██╗ ██║██║  ███╗    
-   ██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗██║██║╚██╗██║██║   ██║    
-   ██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║██║██║ ╚████║╚██████╔╝    
+   ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██╗███╗   ██╗ ██████╗   
+   ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗  ██║██╔════╝   
+   ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝██║██╔██╗ ██║██║  ███╗  
+   ██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗██║██║╚██╗██║██║   ██║  
+   ██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║██║██║ ╚████║╚██████╔╝  
    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝     
-                                                                                 
+                                                                               
             ████████╗███████╗██████╗ ██╗██╗   ██╗███╗   ███╗
 			╚══██╔══╝██╔════╝██╔══██╗██║██║   ██║████╗ ████║
 			   ██║   █████╗  ██║  ██║██║██║   ██║██╔████╔██║
-			   ██║   ██╔══╝  ██║  ██║██║██║   ██║██║╚██╔╝██║               
+			   ██║   ██╔══╝  ██║  ██║██║██║   ██║██║╚██╔╝██║
 xxxx           ██║   ███████╗██████╔╝██║╚██████╔╝██║ ╚═╝ ██║               xxxx
 xxxxxxxx       ╚═╝   ╚══════╝╚═════╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝           xxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -44,9 +44,12 @@ This project was born out my original brainstorming for a first project for this
 >feel. "
 
 3 Precedents for this project
-	1	The text-based adventure game is an older genre of games with a closed-caption system in place of graphics and user-input text for completing actions.
-	2	Francis Alys is a Belgian conceptual artist.  One of his pieces, titled "Sometimes making something leads to nothing" is a video of him pushing a massive block of ice around Mexico City until the ice shrinks to the size of a golf ball and eventually vanishes.  Alys uses this as a theme for many of his pieces. http://www.youtube.com/watch?v=ZedESyQEnMA
-	3	"Everyday the same dream" is a browser-based game that explores the monotony of daily routine for a common office drone. http://www.molleindustria.org/everydaythesamedream/everydaythesamedream.html
+
+-	The text-based adventure game is an older genre of games with a closed-caption system in place of graphics and user-input text for completing actions.
+
+-	Francis Alys is a Belgian conceptual artist.  One of his pieces, titled "Sometimes making something leads to nothing" is a video of him pushing a massive block of ice around Mexico City until the ice shrinks to the size of a golf ball and eventually vanishes.  Alys uses this as a theme for many of his pieces. http://www.youtube.com/watch?v=ZedESyQEnMA
+
+-	"Everyday the same dream" is a browser-based game that explores the monotony of daily routine for a common office drone. http://www.molleindustria.org/everydaythesamedream/everydaythesamedream.html
 
 
 	EXECUTION::
@@ -56,8 +59,11 @@ Mastering Tedium was created in C++ and is intended for use in Unix-style termin
 The user is presented with a description of their surroundings and/or suggestions for potential actions to enter into the space below. Although the user is initially presented with some illusion of choice in commands, the programming pushes the user along a single path regardless of their wishes.
 
 The game is broken up into the following stages:
-1	Home / Laundry Preparation
-2	Street / Path to Laundromat
-3	The Laundromat
+
+-	Home / Laundry Preparation
+
+-	Street / Path to Laundromat
+
+-	The Laundromat
 
 Once the game is completed, the player starts again from the beginning, their actions nullified by time and the social demands of personal hygiene. 
