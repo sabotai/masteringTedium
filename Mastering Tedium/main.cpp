@@ -26,8 +26,9 @@ using namespace std;
     int nagCount;
     int actionCount;
     bool readyToGo;
-    bool homeInit, streetInit, laundromatInit;
+    bool homeInit, streetInit, laundromatInit, restartInit;
     int posCount, readCount;
+    int gatherAmount;
 
 
 void menuDisplay(string command, string _textBuffer1, string _textBuffer2, string _textBuffer3, string _textBuffer4, string _textBuffer5, int _dirtyScore, int _cleanScore){
@@ -85,7 +86,7 @@ void menuDisplay(string command, string _textBuffer1, string _textBuffer2, strin
             cout << ":                                                                              :"<< endl;
             cout << "                         " << command << endl;}
 
-        if (gameState == 2){
+        if (gameState == 2 || gameState == 4){
             cout << "[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]"<< endl;//dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb"<< endl;
             cout << "[][                                                                          ][]"<< endl;
             cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<< endl;
@@ -113,7 +114,7 @@ void menuDisplay(string command, string _textBuffer1, string _textBuffer2, strin
         if (gameState == 3){
             cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;//dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb"<< endl;
             cout << "$$$                                                                          $$$"<< endl;
-            cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<<"debug:"<<posCount<< endl;
+            cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<< endl;
             cout << "$$$                                                                          $$$"<< endl;
             cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;
             cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;
@@ -182,9 +183,11 @@ int main()
         homeInit = true;
         streetInit = true;
         laundromatInit = true;
+        restartInit = false;
         setup = false;
         posCount = 0;
         nagCount = 0;
+        gatherAmount = 6;
     //}
 
     while( true )
@@ -194,6 +197,7 @@ int main()
         if (gameState == -1) {
          cout << "***Mastering Tedium is meant to be played on a traditional 80 x 24 character terminal screen.  If this is not the case, the game will not display correctly and you may need to modify your terminal preferences or config file.  Press enter to begin.***" << endl;
          cin.ignore();
+
          gameState = 0;
         }
 
@@ -216,8 +220,8 @@ int main()
             cout << "        [                      ]                    hMMMhNm:    `    -mNyMMMh   "<< endl;
             cout << "        |  A LAUNDRY SIMULATOR |                    hMMdmM.  `yNMNh.  .NNhMMh   "<< endl;
             cout << "        |    by Alec McClure   |                    hMMyMm   +MMMMMs   dMyMMh   "<< endl;
-            cout << "        [______________________]                    hMMddM-  `sNMNy.  .MNhMMh   "<< endl;
-            cout << "         ----------------------                     hMMMhmN/         :mNyMMMh   "<< endl;
+            cout << "        |      Alpha 0.45      |                    hMMddM-  `sNMNy.  .MNhMMh   "<< endl;
+            cout << "        [______________________]                    hMMMhmN/         :mNyMMMh   "<< endl;
             cout << "         ----------------------                     hMMMMddNms/---/omMddMMMMh   "<< endl;
             cout << "                                                    hMMMMMMmdddmmmddddMMMMMMh   "<< endl;
             cout << "        -------------------------                   hMMMMMMMMMMMMMMMMMMMMMMMh   "<< endl;
@@ -288,23 +292,25 @@ int main()
         if (gameState == 1){ //game state 1 is at home
             cout << "     What shall you do?  ";
             getline(cin, command);
+            if (dirtyScore < 0){
+                dirtyScore = 0;}
+            if (cleanScore < 0){
+                cleanScore = 0;}
             if (command == ""){
                 currentText += "...";
                 actionCount += 1;}
             else if (command == "laundry" || command == "do laundry") {
                 currentText =       "Slow down partner.  If you want to do laundry, you'll have to \"gather\" up some laundry"; }
             else if (command == "gather") {
-                if (dirtyScore > 0){
-                    laundryBag += 6;
-                    dirtyScore -= 6;
-                    if (dirtyScore < 0){
-                        dirtyScore = 0;}
+                if (dirtyScore >= gatherAmount){
+                    laundryBag += gatherAmount;
+                    dirtyScore -= gatherAmount;
 
                     stringBuffer << "You still have " << dirtyScore << " article(s) of dirty clothing lying around";
 
                     currentText =       "You throw some old socks into your laundry bag." + stringBuffer.str(); }
                 else {
-                    currentText =       "All your dirty clothes made it into the laundry bag.  It's time to \"head out\" into the street";
+                    currentText =       "You've gathered enough dirty clothes into the laundry bag.  It's time to \"head out\" into the street";
                     readyToGo = true;  } }
             else if (command == "head out" && readyToGo == true) {
                     gameState = 2;}
@@ -326,13 +332,13 @@ int main()
             else {
                 if (nagCount == 0) {
                     currentText =       "Are you sure you don't want to do \"laundry\"?";
-                    actionCount +=1;}
+                    actionCount +=2;}
                 else if (nagCount == 1) {
                     currentText =       "Are you sure you don't want to do \"laundry\"???";
-                    actionCount +=1;}
+                    actionCount +=2;}
                 else if (nagCount == 2) {
                     currentText =       "Society looks down upon the various body odors emanating from your dirty clothing.  Are you sure you don't want to do \"laundry\"?";
-                    actionCount +=1;}
+                    actionCount +=2;}
                 else if (nagCount == 3) {
                     currentText =       "Not doing laundry just caused you to lose 3 casual friends, but they were'nt that interesting anyways.  You can always do \"laundry\" to attract new ones.";
                     actionCount +=1;}
@@ -374,20 +380,20 @@ int main()
                     else if ((command == "right" || command == "go right" || command == "walk right") && nagCount == 0){
                         currentText = "You walk 5 feet to the right and then wonder why you're carrying such a heavy load in the wrong direction.";
                         nagCount += 1;  }
-                    else if ((command == "forward" || command == "go forward" || command == "straight" || "go straight") && nagCount == 0) {
+                    else if ((command == "forward" || command == "go forward" || command == "straight" || command == "go straight") && nagCount == 0) {
                         currentText = "You walk into the street and almost get hit by a car.";
                         nagCount += 1;  }
                     else {
                         currentText = "I'm pretty sure you want to go \"left\".";   }
                     }
                 else if (posCount == 1){
-                    if (command == "advance" || command == "forward" || command == "go forward" || command == "straight" || command == "go straight"){
+                    if (command == "advance" || command == "forward" || command == "go forward" || command == "straight" || command == "go straight" || command == "continue"){
                         currentText = "You continue down the familiar path, passing other faceless souls, each going about their own anonymous business.  The laundry bag is starting to feel heavier.";
                         posCount += 1;}
                     else {
                         currentText = "There are no paths to turn off from, so your only option is to push \"forward\"";    }}
                 else if (posCount == 2){
-                     if (command == "advance" || command == "forward" || command == "go forward" || command == "straight" || command == "go straight"){
+                     if (command == "advance" || command == "forward" || command == "go forward" || command == "straight" || command == "go straight" || command == "continue"){
                         currentText = "You wonder why you didn't do laundry sooner as you adjust your grip to shift the weight.  You see the laundromat just ahead on the right.";
                         posCount += 1;}
                     else {
@@ -422,7 +428,7 @@ int main()
             else {
                 if (posCount == 0) {
                     if (command == "wash clothes" || command == "laundry" || command == "washer" || command == "washing machine" || command == "wash") { //correct action 1
-                        currentText = "You find the closest washing machine that doesn't look like it's going to break down.  Why don't you \"put your laundry in the machine\" ?";
+                        currentText = "You find the closest washing machine that doesn't look like it's going to break down.  Why don't you \"put the laundry in the machine\" ?";
                         posCount += 1;   }
                     /*else if ((command == "" || command == "" || command == "") && nagCount == 0){ //alternative action 1
                         currentText = "";
@@ -435,34 +441,22 @@ int main()
                     }
 
                 else if (posCount == 1) {
-                    if (command == "put your laundry in the machine" || command == "put laundry in the machine") { //correct action 1
+                    if (command == "put the laundry in the machine" || command == "put laundry in the machine") { //correct action 1
                         currentText = "You throw some of your laundry in the machine.  You dropped one of the moldy socks.  You should \"put more laundry in the machine\"";
                         posCount += 1;   }
-                    else if ((command == "" || command == "" || command == "") && nagCount == 0){ //alternative action 1
-                        currentText = "";
-                        nagCount += 1;  }
-                    else if ((command == "" || command == " " || command == "" || " ") && nagCount == 0) { //alternative action 2
-                        currentText = "Aren't you here to \"wash clothes\" ?";
-                        nagCount += 1;  }
                     else {
-                        currentText = "Perhaps you don't understand how this process works.  Clothes have to be inside the washing machine to get clean, so you need to \"put your laundry in the machine\"";   } //suggest correct action
+                        currentText = "Perhaps you don't understand how this process works.  Clothes have to be inside the washing machine to get clean, so you need to \"put the laundry in the machine\"";   } //suggest correct action
                     }
 
                 else if (posCount == 2 || posCount == 3) {
                     if (command == "put more laundry in the machine" ) { //correct action 1
-                        if (posCount += 1) {
+                        if (posCount == 2) {
                             currentText = "You throw more of your laundry in the machine and decide that the sock isn't worth saving. You rationalize this decision by considering it an anonymous gift to the laundromat's proprietors.  You should \"put more laundry in the machine\"";    }
                         else {
                             currentText = "You overload the machine with the last bit of filth just like the sign says not to.  It's time to \"start the machine\"";    }
                         posCount += 1;   }
-                    else if ((command == "" || command == "" || command == "") && nagCount == 0){ //alternative action 1
-                        currentText = "";
-                        nagCount += 1;  }
-                    else if ((command == "" || command == " " || command == "" || " ") && nagCount == 0) { //alternative action 2
-                        currentText = "Aren't you here to \"wash clothes\" ?";
-                        nagCount += 1;  }
                     else {
-                        currentText = "You're not seriously going to come all the way here to only wash part of your clothes, are you?  Why not \"put more laundry in the machine\"";   } //suggest correct action
+                        currentText = "You're not seriously going to come all the way here to only wash part of your clothes, are you?  Why not \"put more laundry in the machine\" ?";   } //suggest correct action
                     }
 
                 else if (posCount == 4) {
@@ -489,12 +483,9 @@ int main()
                             currentText = "You check on your laundry.  It's in the rinse cycle.  How are you going to kill the time?  You did bring a \"book\""; }
 
                         if (readCount == 2){
-                            currentText = "You check on your laundry.  It's  cycle.  How are you going to kill the time?  Why don't you keep \"reading\" ?"; }
+                            currentText = "You check on your laundry.  It's still in the washing cycle.  How are you going to kill the time?  Why don't you keep \"reading\" ?"; }
 
-                        if (readCount == 3){
-                            currentText = "You check on your laundry.  It's still in the washing cycle.  How are you going to kill the time?  You did bring a \"book\""; }
-
-                        if (readCount > 3){
+                        if (readCount > 2){
                             currentText = "Ok, the washing machine is done with its business.";
                             posCount +=1; }
                         }
@@ -506,23 +497,19 @@ int main()
                         if (readCount == 2){
                             currentText = "Nothing is worse than the contrast between the natural splendour of the inner life, with its natural Indias and its unexplored lands and the squalor (even when it’s not really squalid) of life’s daily routine. And tedium is more oppressive when there’s not the excuse of idleness. The tedium of those who strive hard is the worst of all.(cont.)"; }
                         if (readCount == 3){
-                            currentText = "Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing worth doing. This means that the more there is to do, the more tedium one will feel. (continued)";  }
-                        if (readCount == 4){
-                            currentText = "How often, when I look up from the ledger where I enter amounts, my head is devoid of the whole world! I’d be better off remaining idle, doing nothing and having nothing to do, because that tedium, though real enough, I could at least enjoy. (continued)";}
-                        if (readCount == 5){
-                            currentText = "In my present tedium there is no rest, no nobility, and no well-being against which to feel unwell: there’s a vast effacement of every act I do, rather than a potential weariness from acts I’ll never do.";}
+                            currentText = "Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing worth doing. This means that the more there is to do, the more tedium one will feel.";  }
                         readCount += 1; }
                     else if (command == "something") {
                         currentText = "You do \"something\" and have a great time or whatever."; }
                     else if (command == "phone" || command == "smart phone" || command == "iphone") {
                         currentText = "Your phone is dead.  Why didn't you charge it when you were home earlier?"; }
                     else {
-                        currentText = "Your laundry is still washing.  Why don't you use your \"phone\", \"read a book\" or \"something\" ?";    }}
+                        currentText = "Your laundry is probably still washing.  Why don't you \"check\" on it, use your \"phone\", \"read a book\" or \"something\" else?";    }}
 
 
 
                 else if (posCount == 6){
-                     if (command == "laundry" || command == "dryer" || command == "dry clothes" || command == "switch clothes"){
+                     if (command == "laundry" || command == "dryer" || command == "dry clothes" || command == "switch clothes" || command == "put the clothes in the dryer" || command == "put clothes in the dryer"){
                         currentText = "You promote your clean and wet clothes to the dryer and set it for 36 minutes.";
                         posCount += 1;}
                     else {
@@ -533,16 +520,56 @@ int main()
                 else if (posCount >= 7){
                      if (command == "wait" || command == "check"){
                         if (posCount == 7) {
-
+                            currentText = "You check on your clothes and they're still soaked.  Time to \"wait\" some more.";
+                            posCount+=1;
+                        }
+                        else if (posCount == 8) {
+                            currentText = "You check on your clothes and they're almost dry.  Time to \"wait\" some more.";
+                            posCount+=1;
+                        }
+                        else if (posCount == 9) {
+                            currentText = "Your clothes are finally dry.  It's time to \"go home\""; //this happens on street scene instead of laundromat
+                            restartInit = true;
                         }
 
                         }
+                    else if ((command == "go home" || command == "home" || command == "leave") && restartInit){
+
+                            streetInit = true;
+                            restartInit = false;
+                            newDay = false;
+                            gameState = 4;}
+
                     else {
-                        currentText = "There's nothing left to do, but \"wait\"";    } }
-
-
+                        currentText = "There's nothing left to do, but \"wait\" unless the dryer is done.";    } }
                 }
 
+            }
+
+            if (gameState == 4) {
+                newDay = false;
+
+                if (streetInit) {
+                    currentText = "You decide to \"quickly walk\" home.";
+                 //   laundromatInit = false;
+
+                    clearBuffer();
+                    fillBuffer();
+                    menuDisplay(command, textBuffer1, textBuffer2, textBuffer3, textBuffer4, textBuffer5, dirtyScore, cleanScore);}
+
+                cout << "     What shall you do??  ";
+                getline(cin, command);
+
+                if (command == ""){
+                    currentText += "...";   }
+                else {if (command == "quickly walk" || command == "walk" || command == "walk home") {
+                    cleanScore += laundryBag;
+                    homeInit = true;
+                    newDay = true;
+                    dayCount += 13;
+                    gameState = 1;  }
+                else {
+                    currentText = "Just type \"walk home\" and press enter.";}}
             }
 
         clearBuffer();
