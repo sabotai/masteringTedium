@@ -5,11 +5,25 @@
 	<vector>
 	<cctype>
 
-<<<<<<< HEAD
-1392518187 source:/home/sabotai/git/masteringTedium/Mastering Tedium/main.cpp
-=======
-1392335901 source:/home/sabotai/git/masteringTedium/Mastering Tedium/main.cpp
->>>>>>> b6231b12ed271d7bd6928df0219599da73781f4e
+1392079937 D
+
+1392785959 source:/home/sabotai/git/masteringTedium/Mastering Tedium/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<cctype>
+	<ctime>
+	<sstream>
+
+1392335901 31b12ed271d7bd6928df0219599da73781f4e
+	<iostream>
+	<string>
+	<vector>
+	<cctype>
+	<ctime>
+	<sstream>
+
+1393269196 source:/home/sabotai/git/masteringTedium ALPHA/Mastering Tedium/main.cpp
 	<iostream>
 	<string>
 	<vector>

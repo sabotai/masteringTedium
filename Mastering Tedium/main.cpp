@@ -220,11 +220,7 @@ int main()
             cout << "        [                      ]                    hMMMhNm:    `    -mNyMMMh   "<< endl;
             cout << "        |  A LAUNDRY SIMULATOR |                    hMMdmM.  `yNMNh.  .NNhMMh   "<< endl;
             cout << "        |    by Alec McClure   |                    hMMyMm   +MMMMMs   dMyMMh   "<< endl;
-<<<<<<< HEAD
             cout << "        |      Alpha 0.45      |                    hMMddM-  `sNMNy.  .MNhMMh   "<< endl;
-=======
-            cout << "        |      Alpha 0.4       |                    hMMddM-  `sNMNy.  .MNhMMh   "<< endl;
->>>>>>> 34b18e44935526ff4244bffcc0a8b542cfd9a928
             cout << "        [______________________]                    hMMMhmN/         :mNyMMMh   "<< endl;
             cout << "         ----------------------                     hMMMMddNms/---/omMddMMMMh   "<< endl;
             cout << "                                                    hMMMMMMmdddmmmddddMMMMMMh   "<< endl;
@@ -487,7 +483,7 @@ int main()
                             currentText = "You check on your laundry.  It's in the rinse cycle.  How are you going to kill the time?  You did bring a \"book\""; }
 
                         if (readCount == 2){
-                            currentText = "You check on your laundry.  It's still in the washing cycle.  How are you going to kill the time?  Why don't you keep \"reading\" ?"; }
+                            currentText = "You check on your laundry.  It's in the spin cycle.  How are you going to kill the time?  Why don't you keep \"reading\" ?"; }
 
                         if (readCount > 2){
                             currentText = "Ok, the washing machine is done with its business.";
