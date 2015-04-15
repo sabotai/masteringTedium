@@ -32,6 +32,8 @@ using namespace std;
 
 
 void menuDisplay(string command, string _textBuffer1, string _textBuffer2, string _textBuffer3, string _textBuffer4, string _textBuffer5, int _dirtyScore, int _cleanScore){
+    //send empty lines to clear the screen
+    cout << string( 100, '\n' );
 
     if (newDay && dayCount > 1) {
             cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<< endl;
