@@ -4,6 +4,7 @@
 #include <cctype>
 #include <ctime>
 #include <sstream> //to use stringstream to combine int and string for the day count
+#include <stdio.h>
 
 using namespace std;
 
@@ -170,13 +171,8 @@ void fillBuffer() {
 }
 
 
+void restart(){
 
-
-int main()
-{
-
-
-    //if (setup){
 
         gameState = -1;
         dirtyScore = 39;
@@ -190,11 +186,23 @@ int main()
         posCount = 0;
         nagCount = 0;
         gatherAmount = 6;
-    //}
+        dayCount = 0;
+
+}
+
+int main()
+{
+
+
+    restart();
 
     while( true )
     {
         command.clear();
+
+
+
+
 
         if (gameState == -1) {
          cout << "***Mastering Tedium is meant to be played on a traditional 80 x 24 character terminal screen.  If this is not the case, the game will not display correctly and you may need to modify your terminal preferences or config file.  Press enter to begin.***" << endl;
@@ -298,6 +306,9 @@ int main()
                 dirtyScore = 0;}
             if (cleanScore < 0){
                 cleanScore = 0;}
+            if (command == "restart"){
+                restart();
+            } else
             if (command == ""){
                 currentText += "...";
                 actionCount += 1;}
@@ -372,7 +383,9 @@ int main()
             cout << "     What shall you do?  ";
             getline(cin, command);
 
-            if (command == ""){
+            if (command == "restart"){
+                restart();
+            } else if (command == ""){
                 currentText += "...";   }
             else {
                 if (posCount == 0) {
@@ -425,7 +438,10 @@ int main()
 
             cout << "     What shall you do?  ";
             getline(cin, command);
-            if (command == ""){
+
+            if (command == "restart"){
+                restart();
+            } else if (command == ""){
                 currentText += "...";   }
             else {
                 if (posCount == 0) {
@@ -562,7 +578,10 @@ int main()
                 cout << "     What shall you do??  ";
                 getline(cin, command);
 
-                if (command == ""){
+
+                if (command == "restart"){
+                    restart();
+                } else if (command == ""){
                     currentText += "...";   }
                 else {if (command == "quickly walk" || command == "walk" || command == "walk home") {
                     cleanScore += laundryBag;
