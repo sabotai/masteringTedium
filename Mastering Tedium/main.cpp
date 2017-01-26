@@ -230,7 +230,7 @@ int main()
             cout << "        [                      ]                    hMMMhNm:    `    -mNyMMMh   "<< endl;
             cout << "        |  A LAUNDRY SIMULATOR |                    hMMdmM.  `yNMNh.  .NNhMMh   "<< endl;
             cout << "        |    by Alec McClure   |                    hMMyMm   +MMMMMs   dMyMMh   "<< endl;
-            cout << "        |      Alpha 0.45      |                    hMMddM-  `sNMNy.  .MNhMMh   "<< endl;
+            cout << "        |     Beta-ish 0.71    |                    hMMddM-  `sNMNy.  .MNhMMh   "<< endl;
             cout << "        [______________________]                    hMMMhmN/         :mNyMMMh   "<< endl;
             cout << "         ----------------------                     hMMMMddNms/---/omMddMMMMh   "<< endl;
             cout << "                                                    hMMMMMMmdddmmmddddMMMMMMh   "<< endl;
@@ -287,9 +287,9 @@ int main()
             clearBuffer();
 
             if (homeInit){
-                currentText = "You awake in a dark and filthy room. The air reeks of stale beer and you feel the crunch of forgotten potato chips beneath your feet.  The evening light slipping through the sole window illuminates the room just enough to highlight the soiled clothing surrounding you. This is your bedroom. What does this day hold? Is it \"laundry\"?";
+                currentText = "You awake in a dark and filthy room. The air reeks of stale beer and  you feel the crunch of forgotten potato chips beneath your feet. The  evening light slipping through the sole window illuminates the room   just enough to highlight the soiled clothing surrounding you. This is your bedroom. What does this day hold? Is it \"laundry\"?";
             } else {
-                currentText = "You once again awake in this disheveled mess of a room surrounded by filthy clothes.";
+                currentText = "You once again awake in this disheveled mess of a room surrounded by  filthy clothes.";
             }
             fillBuffer();
             homeInit = false;
@@ -313,13 +313,13 @@ int main()
                 currentText += "...";
                 actionCount += 1;}
             else if (command == "laundry" || command == "do laundry") {
-                currentText =       "Slow down partner.  If you want to do laundry, you'll have to \"gather\" up some laundry"; }
+                currentText =       "Slow down partner.  If you want to do laundry, you'll have to \"gather\" up some laundry."; }
             else if (command == "gather") {
                 if (dirtyScore >= gatherAmount){
                     laundryBag += gatherAmount;
                     dirtyScore -= gatherAmount;
 
-                    stringBuffer << "You still have " << dirtyScore << " article(s) of dirty clothing lying around";
+                    stringBuffer << "You still have " << dirtyScore << "       article(s) of dirty clothing lying around.";
 
                     currentText =       "You throw some old socks into your laundry bag." + stringBuffer.str(); }
                 else {
@@ -334,7 +334,7 @@ int main()
                 currentText =       "What do you mean no?";
                 actionCount +=2;}
             else if (command == "yes") {
-                currentText =       "I'm glad you're finally cooperating.  Are you trying to say you want to do \"laundry\"?";
+                currentText =       "I'm glad you're finally cooperating.  Are you trying to say you want  to do \"laundry\"?";
                 actionCount +=2;}
             else if (command == "help") {
                 currentText =       "There's this expression.  \"Every man is an island\" or something like that.  I think that's how it goes.";
@@ -374,7 +374,7 @@ int main()
         if (gameState == 2){ //game state 2 street
             if (streetInit) {
                 nagCount = 0;
-                currentText = "You find yourself in the middle of a cold and deserted city street carrying an overbearing load on your shoulders.  The overly familiar path to the laundromat is etched into your memory.  You look \"left\" at what is ahead.";
+                currentText = "You find yourself in the middle of a cold and deserted city street    carrying an overbearing load on your shoulders.  The overly familiar  path to the laundromat is etched into your memory.  You look \"left\" at what is ahead.";
                 streetInit = false;
                 clearBuffer();
                 fillBuffer();
@@ -391,7 +391,7 @@ int main()
                 if (posCount == 0) {
                     if (command == "left" || command == "go left" || command == "walk left") {
                         posCount +=1;
-                        currentText = "You turn the corner of your block down the narrow path plowed through the layered snow from the last few weeks.  You pause for a second to reflect on a trivial misunderstanding from a few days ago and then consider moving \"forward\"."; }
+                        currentText = "You turn the corner of your block down the narrow path plowed through the layered snow from the last few weeks.  You pause for a second to  reflect on a trivial misunderstanding from a few days ago and then    consider moving \"forward\"."; }
                     else if ((command == "right" || command == "go right" || command == "walk right") && nagCount == 0){
                         currentText = "You walk 5 feet to the right and then wonder why you're carrying such a heavy load in the wrong direction.";
                         nagCount += 1;  }
@@ -403,16 +403,16 @@ int main()
                     }
                 else if (posCount == 1){
                     if (command == "advance" || command == "forward" || command == "go forward" || command == "straight" || command == "go straight" || command == "continue"){
-                        currentText = "You continue down the familiar path, passing other faceless souls, each going about their own anonymous business.  The laundry bag is starting to feel heavier.";
+                        currentText = "You continue down the familiar path, passing other faceless souls,    each going about their own anonymous business.  The laundry bag is    starting to feel heavier.";
                         posCount += 1;}
                     else {
-                        currentText = "There are no paths to turn off from, so your only option is to push \"forward\"";    }}
+                        currentText = "There are no paths to turn off from, so your only option is to push   \"forward\"";    }}
                 else if (posCount == 2){
                      if (command == "advance" || command == "forward" || command == "go forward" || command == "straight" || command == "go straight" || command == "continue"){
                         currentText = "You wonder why you didn't do laundry sooner as you adjust your grip to shift the weight.  You see the laundromat just ahead on the right.";
                         posCount += 1;}
                     else {
-                        currentText = "There are no paths to turn off from, so your only option is to push \"forward\"";    }}
+                        currentText = "There are no paths to turn off from, so your only option is to push   \"forward\"";    }}
                 else if (posCount >= 3){
                      if (command == "right" || command == "go right" || command == "laundromat" || command == "go into the laundromat"){
                        // currentText = "you done it";
@@ -430,7 +430,7 @@ int main()
         if (gameState == 3){ //game state 3 laundromat
             if (laundromatInit) {
                 posCount = 0;
-                currentText = "The excessively bright laundromat is full of loud children and others who similarly bowed before the call to action.  Closed captioned soap operas and Korean religious programming play on the overhead televisions.";
+                currentText = "The excessively bright laundromat is full of loud children and others who similarly bowed before the call to action.  Closed captioned soap operas and Korean religious programming play on the overhead tele-    visions.";
                 laundromatInit = false;
                 clearBuffer();
                 fillBuffer();
@@ -463,13 +463,13 @@ int main()
                         currentText = "You throw some of your laundry in the machine.  You dropped one of the moldy socks.  You should \"put more laundry in the machine\"";
                         posCount += 1;   }
                     else {
-                        currentText = "Perhaps you don't understand how this process works.  Clothes have to be inside the washing machine to get clean, so you need to \"put the laundry in the machine\"";   } //suggest correct action
+                        currentText = "Perhaps you don't understand how this process works.  Clothes have to be inside the washing machine to get clean, so you need to \"put the   laundry in the machine\"";   } //suggest correct action
                     }
 
                 else if (posCount == 2 || posCount == 3) {
                     if (command == "put more laundry in the machine" ) { //correct action 1
                         if (posCount == 2) {
-                            currentText = "You throw more of your laundry in the machine and decide that the sock isn't worth saving. You rationalize this decision by considering it an anonymous gift to the laundromat's proprietors.  You should \"put more laundry in the machine\"";    }
+                            currentText = "You throw more of your laundry in the machine and decide that the sock isn't worth saving. You rationalize this decision by considering it  an anonymous gift to the laundromat's proprietors.  You should \"put   more laundry in the machine\"";    }
                         else {
                             currentText = "You overload the machine with the last bit of filth just like the sign says not to.  It's time to \"start the machine\"";    }
                         posCount += 1;   }
@@ -498,7 +498,7 @@ int main()
                             currentText = "You check on your laundry.  It's still in the washing cycle.  How are you going to kill the time?  You did bring a \"book\""; }
 
                         if (readCount == 1){
-                            currentText = "You check on your laundry.  It's in the rinse cycle.  How are you going to kill the time?  You did bring a \"book\""; }
+                            currentText = "You check on your laundry.  It's in the rinse cycle.  How are you going to kill the time?  You did bring a \"book\" ?"; }
 
                         if (readCount == 2){
                             currentText = "You check on your laundry.  It's in the spin cycle.  How are you going to kill the time?  Why don't you keep \"reading\" ?"; }
@@ -511,16 +511,16 @@ int main()
                         if (readCount == 0){
                             currentText = "You pull a book out of your bag that you've been reading for months.  -THE BOOK OF DISQUIET by Fernando Pessoa- Perhaps you'll \"read\" more?"; }
                         if (readCount == 1){
-                            currentText = "It is said that tedium is a disease of the idle or that it attacks only those who have nothing to do. But this ailment of the soul is in fact more subtle: it attacks people who are predisposed to it and those who work or who pretend they work (which in this case comes down to the same thing) are less apt to be spared than the truly idle.(continued)"; }
+                            currentText = "It is said that tedium is a disease of the idle or that it attacks    only those who have nothing to do. But this ailment of the soul is in fact more subtle: it attacks people who are predisposed to it and     those who work or who pretend they work(which in this case comes down to the same thing) are less apt to be spared than the truly idle.(...)"; }
                         if (readCount == 2){
-                            currentText = "Nothing is worse than the contrast between the natural splendour of the inner life, with its natural Indias and its unexplored lands and the squalor (even when it’s not really squalid) of life’s daily routine. And tedium is more oppressive when there’s not the excuse of idleness. The tedium of those who strive hard is the worst of all.(cont.)"; }
+                            currentText = "Nothing is worse than the contrast between the natural splendor of the inner life, with its natural Indias and its unexplored lands and the squalor(even when it’s not really squalid) of life’s daily routine. And tedium is more oppressive when there’s not the excuse of idleness. The tedium of those who strive hard is the worst of all.(...)"; }
                         if (readCount == 3){
-                            currentText = "Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing worth doing. This means that the more there is to do, the more tedium one will feel.";  }
+                            currentText = "Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing    worth doing. This means that the more there is to do, the more tedium one will feel.";  }
                         readCount += 1; }
                     else if (command == "something") {
                         currentText = "You do \"something\" and have a great time or whatever."; }
                     else if (command == "phone" || command == "smart phone" || command == "iphone") {
-                        currentText = "Your phone is dead.  Why didn't you charge it when you were home earlier?"; }
+                        currentText = "Your phone is dead.  Why didn't you charge it when you were home      earlier?"; }
                     else {
                         currentText = "Your laundry is probably still washing.  Why don't you \"check\" on it, use your \"phone\", \"read a book\" or \"something\" else?";    }}
 
