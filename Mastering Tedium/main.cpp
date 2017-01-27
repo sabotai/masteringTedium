@@ -37,106 +37,107 @@ void menuDisplay(string command, string _textBuffer1, string _textBuffer2, strin
     cout << string( 100, '\n' );
 
     if (newDay && dayCount > 1) {
-            cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<< endl;
-            cout << "xxx                                                                          xxx"<< endl;
-            cout << "xx          /$$ /$$ /$$     /$$  /$$$$$$  /$$        /$$$$$$  /$$ /$$         xx"<< endl;
-            cout << "x          | $$| $$|  $$   /$$/ /$$__  $$| $$       /$$__  $$| $$| $$          x"<< endl;
-            cout << "           | $$| $$ \\  $$ /$$/ | $$  \\ $$| $$      | $$  \\ $$| $$| $$           "<< endl;
-            cout << "           |__/|__/  \\  $$$$/  | $$  | $$| $$      | $$  | $$|__/|__/           "<< endl;
-            cout << "                      \\  $$/   | $$  | $$| $$      | $$  | $$                   "<< endl;
-            cout << "                       | $$    | $$  | $$| $$      | $$  | $$                   "<< endl;
-            cout << "                       | $$    |  $$$$$$/| $$$$$$$$|  $$$$$$/                   "<< endl;
-            cout << "                       |__/     \\______/ |________/ \\______/                    "<< endl;
+            cout << "  ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ "<< endl;
+            cout << " ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙  "<< endl;
+            cout << " ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅ "<< endl;
+            cout << "                                                                                "<< endl;
+            cout << "           ╭ $$╭ $$▕ $$     ╱$$  ╱$$$$$$  ╱$$        ╱$$$$$$ ╭ $$╭ $$           "<< endl;
+            cout << "           │ $$│ $$▕  $$   ╱$$╱ ╱$$▁▁  $$│ $$       ╱$$▁▁  $$│ $$│ $$           "<< endl;
+            cout << "           │ $$│ $$ ╲  $$ ╱$$╱ ▕ $$  ╲ $$│ $$      ▕ $$  ╲ $$│ $$│ $$        "<< endl;
+            cout << "           └──╯└──╯  ╲  $$$$╱  ▕ $$  ▕ $$│ $$      ▕ $$  ▕ $$╰──╯╰──╯          "<< endl;
+            cout << "                      ╲  $$╱   ▕ $$  ▕ $$│ $$      ▕ $$  ▕ $$                  "<< endl;
+            cout << "                       ▏ $$    ▕ $$  ▕ $$│ $$      ▕ $$  ▕ $$                   "<< endl;
+            cout << "                       ▏ $$    ▕  $$$$$$╱│ $$$$$$$$▕  $$$$$$╱                   "<< endl;
+            cout << "                       └──╯     ╲▁▁▁▁▁▁╱ └────────╯ ╲▁▁▁▁▁▁╱                  "<< endl;
+            cout << "                                                                                "<< endl;
             cout << "                             "<< _textBuffer1                                    << endl;
             cout << "                  "<< _textBuffer2                                       << endl;
             cout << "                                     "<< _textBuffer3                            << endl;
             cout << "                                 "<< _textBuffer4                                << endl;
-            cout << "x                                                                              x"<< endl;
-            cout << "xx                                                                            xx"<< endl;
-            cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<< endl;
-            cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<< endl;
-            cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<< endl;
-            cout << "xxx                                                                          xxx"<< endl;
-            cout << "xx                                                                            xx"<< endl;
-            cout << "x                                                                              x"<< endl;
+            cout << "                                                                                "<< endl;
+            cout << " ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅ "<< endl;
+            cout << "  ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ "<< endl;
+            cout << " ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙  "<< endl;
+            cout << "  ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ "<< endl;
+            //cout << "▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟▙▜▛▟"<< endl;
             cout << "                         " << command << endl;}
 
 
 
     else {
         if (gameState == 1) {
-            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
-            cout << ":::                                                                          :::"<< endl;
+            cout << "╳╳┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┐╳╳"<< endl;
+            cout << "╳╳┇                                                                          ┆╳╳"<< endl;
             cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<< endl;
-            cout << ":::                                                                          :::"<< endl;
-            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
-            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
-            cout << "::                                                                            ::"<< endl;
-            cout << ":                                                                              :"<< endl;
+            cout << "╳╳┇                                                                          ┆╳╳"<< endl;
+            cout << "╳╳┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┘╳╳"<< endl;
+            cout << "╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳"<< endl;
+            cout << "╳╱                                                                            ╲╳"<< endl;
+            cout << "╱                                                                              ╲"<< endl;
             cout << "     "<< _textBuffer1                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer2                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer3                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer4                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer5                                                   <<"     "<< endl;
-            cout << "                                                                                "<< endl;
-            cout << ":                                                                              :"<< endl;
-            cout << "::                                                                            ::"<< endl;
-            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
-            cout << "::::::::::::::::::::::::::::::::::::  HOME  ::::::::::::::::::::::::::::::::::::"<< endl;
-            cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<< endl;
-            cout << ":::                                                                          :::"<< endl;
-            cout << "::                                                                            ::"<< endl;
-            cout << ":                                                                              :"<< endl;
+            cout << "╲                                                                              ╱"<< endl;
+            cout << "╳╲                                                                            ╱╳"<< endl;
+            cout << "╳╳╲                                                                          ╱╳╳"<< endl;
+            cout << "╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳"<< endl;
+            cout << "╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳  HOME  ╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳"<< endl;
+            cout << "╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳"<< endl;
+            cout << "╳╳╱                                                                          ╲╳╳"<< endl;
+            cout << "╳╱                                                                            ╲╳"<< endl;
+            cout << "╱                                                                              ╲"<< endl;
             cout << "                         " << command << endl;}
 
         if (gameState == 2 || gameState == 4){
-            cout << "[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]"<< endl;//dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb"<< endl;
-            cout << "[][                                                                          ][]"<< endl;
+            cout << "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"<< endl;//dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb"<< endl;
+            cout << "▓▓▓                                                                          ▓▓▓"<< endl;
             cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<< endl;
-            cout << "[][                                                                          ][]"<< endl;
-            cout << "[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]"<< endl;
-            cout << "[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]"<< endl;
-            cout << "[]                                                                            []"<< endl;
-            cout << "[                                                                              ]"<< endl;
+            cout << "▓▓▓                                                                          ▓▓▓"<< endl;
+            cout << "▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓"<< endl;
+            cout << "▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓"<< endl;
+            cout << "▒░                                                                            ░▒"<< endl;
+            cout << "░                                                                              ░"<< endl;
             cout << "     "<< _textBuffer1                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer2                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer3                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer4                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer5                                                   <<"     "<< endl;
-            cout << "                                                                                "<< endl;
-            cout << "[                                                                              ]"<< endl;
-            cout << "[]                                                                            []"<< endl;
-            cout << "[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]"<< endl;
-            cout << "[][][][][][][][][][][][][][][][][][  STREET  ][][][][][][][][][][][][][][][][][]"<< endl;
-            cout << "[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]"<< endl;
-            cout << "[][                                                                          ][]"<< endl;
-            cout << "[]                                                                            []"<< endl;
-            cout << "[                                                                              ]"<< endl;
+            cout << "░                                                                              ░"<< endl;
+            cout << "▒░                                                                            ░▒"<< endl;
+            cout << "▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓"<< endl;
+            cout << "▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓"<< endl;
+            cout << "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  STREET  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"<< endl;
+            cout << "▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓"<< endl;
+            cout << "▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓▓"<< endl;
+            cout << "▓▒░                                                                          ░▒▓"<< endl;
+            cout << "▒░                                                                            ░▒"<< endl;
             cout << "                         " << command << endl;}
 
         if (gameState == 3){
-            cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;//dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb"<< endl;
-            cout << "$$$                                                                          $$$"<< endl;
+            cout << "¥¥¥€€€$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$€€€¥¥¥"<< endl;//dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb"<< endl;
+            cout << "¥¥¥                                                                          ¥¥¥"<< endl;
             cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<< endl;
-            cout << "$$$                                                                          $$$"<< endl;
-            cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;
-            cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;
-            cout << "$$                                                                            $$"<< endl;
-            cout << "$                                                                              $"<< endl;
+            cout << "¥¥¥                                                                          ¥¥¥"<< endl;
+            cout << "¥¥¥€€€$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$€€€¥¥¥"<< endl;
+            cout << "¥¥¥€€€$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$€€€¥¥¥"<< endl;
+            cout << "££                                                                            ££"<< endl;
+            cout << "£                                                                              £"<< endl;
             cout << "     "<< _textBuffer1                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer2                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer3                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer4                                                   <<"     "<< endl;
             cout << "     "<< _textBuffer5                                                   <<"     "<< endl;
             cout << "                                                                                "<< endl;
-            cout << "$                                                                              $"<< endl;
-            cout << "$$                                                                            $$"<< endl;
-            cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;
-            cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  LAUNDROMAT  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;
-            cout << "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<< endl;
-            cout << "$$$                                                                          $$$"<< endl;
-            cout << "$$                                                                            $$"<< endl;
-            cout << "$                                                                              $"<< endl;
+            cout << "£                                                                              £"<< endl;
+            cout << "££                                                                            ££"<< endl;
+            cout << "¥¥¥€€€$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$€€€¥¥¥"<< endl;
+            cout << "¥¥¥€€€$$$$$$$$$$$$$$$$$$$$$$$$$$$$  LAUNDROMAT  $$$$$$$$$$$$$$$$$$$$$$$$$$€€€¥¥¥"<< endl;
+            cout << "¥¥¥€€€$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$€€€¥¥¥"<< endl;
+            cout << "£££                                                                          £££"<< endl;
+            cout << "££                                                                            ££"<< endl;
+            cout << "£                                                                              £"<< endl;
             cout << "                         " << command << endl;}
 
 
@@ -205,7 +206,7 @@ int main()
 
 
         if (gameState == -1) {
-         cout << "***Mastering Tedium is meant to be played on a traditional 80 x 24 character terminal screen.  If this is not the case, the game will not display correctly and you may need to modify your terminal preferences or config file.  Press enter to begin.***" << endl;
+         cout << endl << endl << endl << "***Mastering Tedium is meant to be played on a traditional 80 x 24 character terminal screen.  If this is not the case, the game will not display correctly and you may need to modify your terminal preferences or config file.  Press enter to begin.***" << endl;
          cin.ignore();
 
          gameState = 0;
@@ -213,30 +214,60 @@ int main()
 
         if (gameState == 0) {
 
-            cout << "                                                                                "<< endl;
-            cout << "  ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██╗███╗   ██╗ ██████╗     "<< endl;
-            cout << "  ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗  ██║██╔════╝     "<< endl;
-            cout << "  ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝██║██╔██╗ ██║██║  ███╗    "<< endl;
-            cout << "  ██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗██║██║╚██╗██║██║   ██║    "<< endl;
-            cout << "  ██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║██║██║ ╚████║╚██████╔╝    "<< endl;
-            cout << "  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝     "<< endl;
-            cout << "  ████████╗███████╗██████╗ ██╗██╗   ██╗███╗   ███╗    hdmmmyyyyyh////smmmms     "<< endl;
-            cout << "  ╚══██╔══╝██╔════╝██╔══██╗██║██║   ██║████╗ ████║    smmmmhhyhhdysyyymmmmo     "<< endl;
-            cout << "     ██║   █████╗  ██║  ██║██║██║   ██║██╔████╔██║   ymMMMMMMMMMMMMMMMMMMMNy    "<< endl;
-            cout << "     ██║   ██╔══╝  ██║  ██║██║██║   ██║██║╚██╔╝██║  odmmmmmmmmmmmmmmmmmmmmmmo   "<< endl;
-            cout << "     ██║   ███████╗██████╔╝██║╚██████╔╝██║ ╚═╝ ██║  hMMMMMMMMMMMMMMMMMMMMMMMh   "<< endl;
-            cout << "     ╚═╝   ╚══════╝╚═════╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝  hMMMMMMmddddmdddddMMMMMMh   "<< endl;
-            cout << "         ______________________                     hMMMMddNdo:...:odMddMMMMh   "<< endl;
-            cout << "        [                      ]                    hMMMhNm:    `    -mNyMMMh   "<< endl;
-            cout << "        |  A LAUNDRY SIMULATOR |                    hMMdmM.  `yNMNh.  .NNhMMh   "<< endl;
-            cout << "        |    by Alec McClure   |                    hMMyMm   +MMMMMs   dMyMMh   "<< endl;
-            cout << "        |     Beta-ish 0.71    |                    hMMddM-  `sNMNy.  .MNhMMh   "<< endl;
-            cout << "        [______________________]                    hMMMhmN/         :mNyMMMh   "<< endl;
-            cout << "         ----------------------                     hMMMMddNms/---/omMddMMMMh   "<< endl;
-            cout << "                                                    hMMMMMMmdddmmmddddMMMMMMh   "<< endl;
-            cout << "        -------------------------                   hMMMMMMMMMMMMMMMMMMMMMMMh   "<< endl;
-            cout << "       < PRESS ENTER TO CONTINUE >                  ymmmmmmmmmmmmmmmmmmmmmmmy   "<< endl;
-            cout << "        -------------------------                   ymmmmmmmmmmmmmmmmmmmmmmmy   ";
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"<< endl;
+            cout << "░░░███╗░░░███╗░█████╗░███████╗████████╗███████╗██████╗░██╗███╗░░░██╗░██████╗░░░░"<< endl;
+            cout << "░░░████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗░░██║██╔════╝░░░░"<< endl;
+            cout << "░░░██╔████╔██║███████║███████╗░░░██║░░░█████╗░░██████╔╝██║██╔██╗░██║██║░░███╗░░░"<< endl;
+            cout << "░░░██║╚██╔╝██║██╔══██║╚════██║░░░██║░░░██╔══╝░░██╔══██╗██║██║╚██╗██║██║░░░██║░░░"<< endl;
+            cout << "░░░██║░╚═╝░██║██║░░██║███████║░░░██║░░░███████╗██║░░██║██║██║░╚████║╚██████╔╝░░░"<< endl;
+            cout << "░░░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝╚═╝░░╚═══╝ ╚═════╝░░░░"<< endl;
+            cout << "░░░████████╗███████╗██████╗░██╗██╗░░░██╗███╗░░░███╗░░░hdmmmyyyyyh////smmmms░░░░░"<< endl;
+            cout << "░░░╚══██╔══╝██╔════╝██╔══██╗██║██║░░░██║████╗ ████║░░░smmmmhhyhhdysyyymmmmo░░░░░"<< endl;
+            cout << "░░░░░░██║░░░█████╗░░██║░░██║██║██║░░░██║██╔████╔██║░░ymMMMMMMMMMMMMMMMMMMMNy░░░░"<< endl;
+            cout << "░░░░░░██║░░░██╔══╝░░██║░░██║██║██║░░░██║██║╚██╔╝██║░odmmmmmmmmmmmmmmmmmmmmmmo░░░"<< endl;
+            cout << "░░░░░░██║░░░███████╗██████╔╝██║╚██████╔╝██║░╚═╝░██║░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
+            cout << "░░░░░░╚═╝░░░╚══════╝╚═════╝░╚═╝░╚═════╝░╚═╝░░░░░╚═╝░hMMMMMMmddddmdddddMMMMMMh░░░"<< endl;
+            cout << "░░░░░░░░██████╗░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░hMMMMddNdo:...:odMddMMMMh░░░"<< endl;
+            cout << "░░░░░░░░╚════██╗░░░░┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┓░hMMMhNm:    `    -mNyMMMh░░░"<< endl;
+            cout << "░░░░░░░░░█████╔╝░░░░┊         A LAUNDRY SIM       ┊░hMMdmM.  `yNMNh.  .NNhMMh░░░"<< endl;
+            cout << "░░░░░░░░██╔═══╝░░░░░┊     NOW WITH MORE TEDIUM    ┊░hMMyMm   +MMMMMs   dMyMMh░░░"<< endl;
+            cout << "░░░░░░░░███████╗░░░░┊        by Alec McClure      ┊░hMMddM-  `sNMNy.  .MNhMMh░░░"<< endl;
+            cout << "░░░░░░░░╚══════╝░░░░┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛░hMMMhmN/         :mNyMMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░hMMMMddNms/---/omMddMMMMh░░░"<< endl;
+            cout << "░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░hMMMMMMmdddmmmddddMMMMMMh░░░"<< endl;
+            cout << "░░░░░▓▓▓▓▓▓▓▓▓▓ PRESS ENTER TO CONTINUE ▓▓▓▓▓▓▓▓▓▓░░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
+            cout << "░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ymmmmmmmmmmmmmmmmmmmmmmmy░░░"<< endl;
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ymmmmmmmmmmmmmmmmmmmmmmmy░░░";
+/*
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"<< endl;
+            cout << "░░░███╗░░░███╗░█████╗░███████╗████████╗███████╗██████╗░██╗███╗░░░██╗░██████╗░░░░"<< endl;
+            cout << "░░░████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗░░██║██╔════╝░░░░"<< endl;
+            cout << "░░░██╔████╔██║███████║███████╗░░░██║░░░█████╗░░██████╔╝██║██╔██╗░██║██║░░███╗░░░"<< endl;
+            cout << "░░░██║╚██╔╝██║██╔══██║╚════██║░░░██║░░░██╔══╝░░██╔══██╗██║██║╚██╗██║██║░░░██║░░░"<< endl;
+            cout << "░░░██║░╚═╝░██║██║░░██║███████║░░░██║░░░███████╗██║░░██║██║██║░╚████║╚██████╔╝░░░"<< endl;
+            cout << "░░░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝╚═╝░░╚═══╝ ╚═════╝░░░░"<< endl;
+            cout << "░░░████████╗███████╗██████╗░██╗██╗░░░██╗███╗░░░███╗░░░hdmmmyyyyyh////smmmms░░░░░"<< endl;
+            cout << "░░░╚══██╔══╝██╔════╝██╔══██╗██║██║░░░██║████╗ ████║░░░smmmmhhyhhdysyyymmmmo░░░░░"<< endl;
+            cout << "░░░░░░██║░░░█████╗░░██║░░██║██║██║░░░██║██╔████╔██║░░ymMMMMMMMMMMMMMMMMMMMNy░░░░"<< endl;
+            cout << "░░░░░░██║░░░██╔══╝░░██║░░██║██║██║░░░██║██║╚██╔╝██║░odmmmmmmmmmmmmmmmmmmmmmmo░░░"<< endl;
+            cout << "░░░░░░██║░░░███████╗██████╔╝██║╚██████╔╝██║░╚═╝░██║░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
+            cout << "░░░░░░╚═╝░░░╚══════╝╚═════╝░╚═╝░╚═════╝░╚═╝░░░░░╚═╝░hMMMMMMmddddmdddddMMMMMMh░░░"<< endl;
+            cout << "░░░░░░░░██████╗░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░hMMMMddNdo:...:odMddMMMMh░░░"<< endl;
+            cout << "░░░░░░░░╚════██╗░░░░┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┓░hMMMhNm:    `    -mNyMMMh░░░"<< endl;
+            cout << "░░░░░░░░░█████╔╝░░░░┊         A LAUNDRY SIM       ┊░hMMdmM.  `yNMNh.  .NNhMMh░░░"<< endl;
+            cout << "░░░░░░░░██╔═══╝░░░░░┊     NOW WITH MORE TEDIUM    ┊░hMMyMm   +MMMMMs   dMyMMh░░░"<< endl;
+            cout << "░░░░░░░░███████╗░░░░┊        by Alec McClure      ┊░hMMddM-  `sNMNy.  .MNhMMh░░░"<< endl;
+            cout << "░░░░░░░░╚══════╝░░░░┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛░hMMMhmN/         :mNyMMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░hMMMMddNms/---/omMddMMMMh░░░"<< endl;
+            cout << "░░░░░╔═══════════════════════════════════════════╗░░hMMMMMMmdddmmmddddMMMMMMh░░░"<< endl;
+            cout << "░░░░░║          PRESS ENTER TO CONTINUE          ║░░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
+            cout << "░░░░░╚═══════════════════════════════════════════╝░░ymmmmmmmmmmmmmmmmmmmmmmmy░░░"<< endl;
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ymmmmmmmmmmmmmmmmmmmmmmmy░░░";
+            */
+
+
+
+
 
 
 
@@ -333,11 +364,23 @@ int main()
             else if (command == "no") {
                 currentText =       "What do you mean no?";
                 actionCount +=2;}
-            else if (command == "yes") {
+            else if (command == "yes" || command == "sure" || command == "ok") {
                 currentText =       "I'm glad you're finally cooperating.  Are you trying to say you want  to do \"laundry\"?";
                 actionCount +=2;}
             else if (command == "help") {
                 currentText =       "There's this expression.  \"Every man is an island\" or something like that.  I think that's how it goes.";
+                actionCount += 2;}
+            else if (command == "cry") {
+                currentText =       "There's no crying in baseball.";
+                actionCount += 2;}
+            else if (command == "die" || command == "commit suicide" || command == "suicide") {
+                currentText =       "Whoa there... you should probably call 1 \(800\) 273 8255 before doing  anything drastic.";
+                actionCount += 2;}
+            else if (command == "go north" || command == "north" || command == "look north" || command == "south" || command == "go south" || command == "west" || command == "go west" || command == "east" || command == "go east" || command == "look south" || command == "look west" || command == "look east") {
+                currentText =       "No compass will ever point you in the right direction.";
+                actionCount += 2;}
+            else if (command == "run away" || command == "run") {
+                currentText =       "You run in circles for 5 minutes before realizing that you can't outrun your problems.";
                 actionCount += 2;}
             else if (command == "sleep" || command == "go to sleep") {
                 currentText =       "You ignore your mounting problems and try to sleep through the day.";
@@ -350,16 +393,16 @@ int main()
                     currentText =       "Are you sure you don't want to do \"laundry\"???";
                     actionCount +=2;}
                 else if (nagCount == 2) {
-                    currentText =       "Society looks down upon the various body odors emanating from your dirty clothing.  Are you sure you don't want to do \"laundry\"?";
+                    currentText =       "Society looks down upon the various body odors emanating from your    dirty clothing.  Are you sure you don't want to do \"laundry\"?";
                     actionCount +=2;}
                 else if (nagCount == 3) {
-                    currentText =       "Not doing laundry just caused you to lose 3 casual friends, but they were'nt that interesting anyways.  You can always do \"laundry\" to attract new ones.";
+                    currentText =       "Not doing laundry just caused you to lose 3 casual friends, but they  were'nt that interesting anyways.  You can always do \"laundry\" to     attract new ones.";
                     actionCount +=1;}
                 else if (nagCount == 4) {
-                    currentText =       "Your once loyal pet cat no longer cuddles in your lap or comes within 10 feet of your malodorous room.  Are you sure you don't want to do \"laundry\"?";
+                    currentText =       "Your once loyal pet cat no longer cuddles in your lap or comes within 10 feet of your malodorous room.  Do you even want to do \"laundry\"?";
                     actionCount +=1;}
                 else if (nagCount == 5) {
-                    currentText =       "You notice considerable mildew growth on the underside of one of the smaller piles of clothing.  Are you sure you don't want to do \"laundry\"?";
+                    currentText =       "You notice considerable mildew growth on the underside of one of the smaller piles of clothing.  Do you even want to do \"laundry\"?";
                     actionCount +=1;}
                 else if (nagCount > 5) {
                     currentText =       "The putrid smell drifting into the common hallway of your apartment building causes both of your neighbors who have never met to knock on the door and ask \"Are you dead or do you just need to do \"laundry\"?\"";
@@ -430,7 +473,7 @@ int main()
         if (gameState == 3){ //game state 3 laundromat
             if (laundromatInit) {
                 posCount = 0;
-                currentText = "The excessively bright laundromat is full of loud children and others who similarly bowed before the call to action.  Closed captioned soap operas and Korean religious programming play on the overhead tele-    visions.";
+                currentText = "The excessively bright laundromat is full of loud children and others who similarly bowed before the call to action. Closed captioned tele- novelas and Korean religious programming play on the overhead         televisions.";
                 laundromatInit = false;
                 clearBuffer();
                 fillBuffer();
@@ -498,7 +541,7 @@ int main()
                             currentText = "You check on your laundry.  It's still in the washing cycle.  How are you going to kill the time?  You did bring a \"book\""; }
 
                         if (readCount == 1){
-                            currentText = "You check on your laundry.  It's in the rinse cycle.  How are you going to kill the time?  You did bring a \"book\" ?"; }
+                            currentText = "You check on your laundry. It's in the rinse cycle. How are you going to kill the time?  You did bring a \"book\" ?"; }
 
                         if (readCount == 2){
                             currentText = "You check on your laundry.  It's in the spin cycle.  How are you going to kill the time?  Why don't you keep \"reading\" ?"; }
@@ -513,9 +556,9 @@ int main()
                         if (readCount == 1){
                             currentText = "It is said that tedium is a disease of the idle or that it attacks    only those who have nothing to do. But this ailment of the soul is in fact more subtle: it attacks people who are predisposed to it and     those who work or who pretend they work(which in this case comes down to the same thing) are less apt to be spared than the truly idle.(...)"; }
                         if (readCount == 2){
-                            currentText = "Nothing is worse than the contrast between the natural splendor of the inner life, with its natural Indias and its unexplored lands and the squalor(even when it’s not really squalid) of life’s daily routine. And tedium is more oppressive when there’s not the excuse of idleness. The tedium of those who strive hard is the worst of all.(...)"; }
+                            currentText = "Nothing is worse than the contrast between the natural splendor of the inner life, with its natural Indias and its unexplored lands and the squalor(even when it’s not really squalid) of life’s daily routine. And tedium is more oppressive when there’s not the excuse of idle- ness. The tedium of those who strive hard is the worst of all.(...)"; }
                         if (readCount == 3){
-                            currentText = "Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing    worth doing. This means that the more there is to do, the more tedium one will feel.";  }
+                            currentText = "Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing    worth doing. This means that the more there is to do, the more tedium one will feel. (end)";  }
                         readCount += 1; }
                     else if (command == "something") {
                         currentText = "You do \"something\" and have a great time or whatever."; }
@@ -538,7 +581,7 @@ int main()
                 else if (posCount >= 7){
                      if (command == "wait" || command == "check"){
                         if (posCount == 7) {
-                            currentText = "You check on your clothes and they're still soaked.  Time to \"wait\" some more.";
+                            currentText = "You check on your clothes and they're still soaked.  Time to \"wait\"   some more.";
                             posCount+=1;
                         }
                         else if (posCount == 8) {
@@ -586,8 +629,12 @@ int main()
                 else {if (command == "quickly walk" || command == "walk" || command == "walk home") {
                     cleanScore += laundryBag;
                     homeInit = true;
+                    laundromatInit = true;
                     newDay = true;
                     dayCount += 13;
+                    dirtyScore += 24;
+                    cleanScore -= 24;
+                    readCount = 0;
                     gameState = 1;  }
                 else {
                     currentText = "Just type \"walk home\" and press enter.";}}

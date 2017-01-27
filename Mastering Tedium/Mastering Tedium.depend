@@ -7,13 +7,14 @@
 
 1392079937 D
 
-1392785959 source:/home/sabotai/git/masteringTedium/Mastering Tedium/main.cpp
+1485560002 source:/home/sabotai/git/masteringTedium/Mastering Tedium/main.cpp
 	<iostream>
 	<string>
 	<vector>
 	<cctype>
 	<ctime>
 	<sstream>
+	<stdio.h>
 
 1392335901 31b12ed271d7bd6928df0219599da73781f4e
 	<iostream>
