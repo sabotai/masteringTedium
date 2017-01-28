@@ -41,14 +41,22 @@ void menuDisplay(string command, string _textBuffer1, string _textBuffer2, strin
             cout << " ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙ ▜▛ ▟▙  "<< endl;
             cout << " ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅ "<< endl;
             cout << "                                                                                "<< endl;
-            cout << "           ╭ $$╭ $$▕ $$     ╱$$  ╱$$$$$$  ╱$$        ╱$$$$$$ ╭ $$╭ $$           "<< endl;
+            cout << "            /$$ /$$ /$$     /$$  /$$$$$$  /$$        /$$$$$$  /$$ /$$           "<< endl;
+            cout << "           | $$| $$|  $$   /$$/ /$$__  $$| $$       /$$__  $$| $$| $$           "<< endl;
+            cout << "           | $$| $$ \\  $$ /$$/ | $$  \\ $$| $$      | $$  \\ $$| $$| $$           "<< endl;
+            cout << "           |__/|__/  \\  $$$$/  | $$  | $$| $$      | $$  | $$|__/|__/           "<< endl;
+            cout << "                      \\  $$/   | $$  | $$| $$      | $$  | $$                   "<< endl;
+            cout << "                       | $$    | $$  | $$| $$      | $$  | $$                   "<< endl;
+            cout << "                       | $$    |  $$$$$$/| $$$$$$$$|  $$$$$$/                   "<< endl;
+            cout << "                       |__/     \\______/ |________/ \\______/                    "<< endl;
+            /*cout << "           ╭ $$╭ $$▕ $$     ╱$$  ╱$$$$$$  ╱$$        ╱$$$$$$ ╭ $$╭ $$           "<< endl;
             cout << "           │ $$│ $$▕  $$   ╱$$╱ ╱$$▁▁  $$│ $$       ╱$$▁▁  $$│ $$│ $$           "<< endl;
             cout << "           │ $$│ $$ ╲  $$ ╱$$╱ ▕ $$  ╲ $$│ $$      ▕ $$  ╲ $$│ $$│ $$        "<< endl;
             cout << "           └──╯└──╯  ╲  $$$$╱  ▕ $$  ▕ $$│ $$      ▕ $$  ▕ $$╰──╯╰──╯          "<< endl;
             cout << "                      ╲  $$╱   ▕ $$  ▕ $$│ $$      ▕ $$  ▕ $$                  "<< endl;
             cout << "                       ▏ $$    ▕ $$  ▕ $$│ $$      ▕ $$  ▕ $$                   "<< endl;
             cout << "                       ▏ $$    ▕  $$$$$$╱│ $$$$$$$$▕  $$$$$$╱                   "<< endl;
-            cout << "                       └──╯     ╲▁▁▁▁▁▁╱ └────────╯ ╲▁▁▁▁▁▁╱                  "<< endl;
+            cout << "                       └──╯     ╲▁▁▁▁▁▁╱ └────────╯ ╲▁▁▁▁▁▁╱                  "<< endl;*/
             cout << "                                                                                "<< endl;
             cout << "                             "<< _textBuffer1                                    << endl;
             cout << "                  "<< _textBuffer2                                       << endl;
@@ -66,11 +74,11 @@ void menuDisplay(string command, string _textBuffer1, string _textBuffer2, strin
 
     else {
         if (gameState == 1) {
+            cout << "╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳"<< endl;
             cout << "╳╳┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┐╳╳"<< endl;
-            cout << "╳╳┇                                                                          ┆╳╳"<< endl;
             cout << "           DIRTY CLOTHES: "<<_dirtyScore<<"     CLEAN CLOTHES: "<<_cleanScore<<"     DAYS ELAPSED: "<<dayCount<< endl;
-            cout << "╳╳┇                                                                          ┆╳╳"<< endl;
             cout << "╳╳┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┘╳╳"<< endl;
+            cout << "╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳"<< endl;
             cout << "╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳"<< endl;
             cout << "╳╱                                                                            ╲╳"<< endl;
             cout << "╱                                                                              ╲"<< endl;
@@ -214,7 +222,7 @@ int main()
 
         if (gameState == 0) {
 
-            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"<< endl;
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░v0.8"<< endl;
             cout << "░░░███╗░░░███╗░█████╗░███████╗████████╗███████╗██████╗░██╗███╗░░░██╗░██████╗░░░░"<< endl;
             cout << "░░░████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗░░██║██╔════╝░░░░"<< endl;
             cout << "░░░██╔████╔██║███████║███████╗░░░██║░░░█████╗░░██████╔╝██║██╔██╗░██║██║░░███╗░░░"<< endl;
@@ -402,7 +410,7 @@ int main()
                     currentText =       "Your once loyal pet cat no longer cuddles in your lap or comes within 10 feet of your malodorous room.  Do you even want to do \"laundry\"?";
                     actionCount +=1;}
                 else if (nagCount == 5) {
-                    currentText =       "You notice considerable mildew growth on the underside of one of the smaller piles of clothing.  Do you even want to do \"laundry\"?";
+                    currentText =       "You notice considerable mildew growth on the underside of one of the  smaller piles of clothing.  Do you even want to do \"laundry\"?";
                     actionCount +=1;}
                 else if (nagCount > 5) {
                     currentText =       "The putrid smell drifting into the common hallway of your apartment building causes both of your neighbors who have never met to knock on the door and ask \"Are you dead or do you just need to do \"laundry\"?\"";
@@ -516,7 +524,9 @@ int main()
                         else {
                             currentText = "You overload the machine with the last bit of filth just like the sign says not to.  It's time to \"start the machine\"";    }
                         posCount += 1;   }
-                    else {
+                    else if (command == "sock" || command == "pick up sock" || command == "grab sock"){
+                        currentText = "Do you *really* want to touch that sock? ...Wait, don't answer that.";    //suggest correct action
+                    } else {
                         currentText = "You're not seriously going to come all the way here to only wash part of your clothes, are you?  Why not \"put more laundry in the machine\" ?";   } //suggest correct action
                     }
 
@@ -559,6 +569,9 @@ int main()
                             currentText = "Nothing is worse than the contrast between the natural splendor of the inner life, with its natural Indias and its unexplored lands and the squalor(even when it’s not really squalid) of life’s daily routine. And tedium is more oppressive when there’s not the excuse of idle- ness. The tedium of those who strive hard is the worst of all.(...)"; }
                         if (readCount == 3){
                             currentText = "Tedium is not the disease of being bored because there’s nothing to do, but the more serious disease of feeling that there’s nothing    worth doing. This means that the more there is to do, the more tedium one will feel. (end)";  }
+                        if (readCount >= 4){
+                            currentText = "Maybe you should check on your wash.  That book sucked anyways.";  }
+
                         readCount += 1; }
                     else if (command == "something") {
                         currentText = "You do \"something\" and have a great time or whatever."; }
@@ -585,11 +598,20 @@ int main()
                             posCount+=1;
                         }
                         else if (posCount == 8) {
-                            currentText = "You check on your clothes and they're almost dry.  Time to \"wait\" some more.";
+                            currentText = "You check on your clothes and they're still wet. The woman next to you looks at you like you're crazy.  Time to \"wait\" some more.";
                             posCount+=1;
                         }
                         else if (posCount == 9) {
+                            currentText = "You check on your clothes and they're getting there.  Time to \"wait\"  some more.";
+                            posCount+=1;
+                        }
+                        else if (posCount == 10) {
+                            currentText = "You check on your clothes and they're almost dry.  Time to \"wait\" some more.";
+                            posCount+=1;
+                        }
+                        else if (posCount == 11) {
                             currentText = "Your clothes are finally dry.  It's time to \"go home\""; //this happens on street scene instead of laundromat
+                            cleanScore = 69 - dirtyScore;
                             restartInit = true;
                         }
 
