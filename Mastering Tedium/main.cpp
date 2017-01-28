@@ -653,6 +653,7 @@ int main()
                     homeInit = true;
                     laundromatInit = true;
                     newDay = true;
+                    posCount = 0;
                     dayCount += 13;
                     dirtyScore += 24;
                     cleanScore -= 24;
