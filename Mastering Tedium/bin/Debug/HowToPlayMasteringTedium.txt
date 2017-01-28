@@ -1,0 +1,14 @@
+
+MASTERING TEDIUM / MASTERING TEDIUM 2
+1/27/17
+
+In order to play Mastering Tedium/2, you need to open up your preferred terminal/terminal emulator and navigate to the folder containing the binary. ( If you're using a Mac and don't know what this is, simply open up the app called Terminal, which is installed with OSX. )  For instance, if you've extracted the bin to "~/git/masteringTedium/Mastering Tedium/bin/Debug", you will have to use the following:
+
+	"cd 'git/masteringTedium/Mastering Tedium/bin/Debug'" change directory to the binary containing folder
+	"./MasteringTedium2-08-linux" run the binary (make sure the permission is set to allow executing as a program)
+
+If you have any trouble, don't hesitate to e-mail me at alexander.mcclure@gmail.com
+Enjoy!
+
+Alec McClure
+www.alecmcclure.com
