@@ -10,6 +10,7 @@ using namespace std;
 
 
     bool setup;
+    bool won = false;
     int gameState;
     int dirtyScore;
     int cleanScore;
@@ -236,11 +237,11 @@ int main()
             cout << "░░░░░░██║░░░███████╗██████╔╝██║╚██████╔╝██║░╚═╝░██║░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
             cout << "░░░░░░╚═╝░░░╚══════╝╚═════╝░╚═╝░╚═════╝░╚═╝░░░░░╚═╝░hMMMMMMmddddmdddddMMMMMMh░░░"<< endl;
             cout << "░░░░░░░░██████╗░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░hMMMMddNdo:...:odMddMMMMh░░░"<< endl;
-            cout << "░░░░░░░░╚════██╗░░░░┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┓░hMMMhNm:    `    -mNyMMMh░░░"<< endl;
-            cout << "░░░░░░░░░█████╔╝░░░░┊         A LAUNDRY SIM       ┊░hMMdmM.  `yNMNh.  .NNhMMh░░░"<< endl;
-            cout << "░░░░░░░░██╔═══╝░░░░░┊     NOW WITH MORE TEDIUM    ┊░hMMyMm   +MMMMMs   dMyMMh░░░"<< endl;
-            cout << "░░░░░░░░███████╗░░░░┊        by Alec McClure      ┊░hMMddM-  `sNMNy.  .MNhMMh░░░"<< endl;
-            cout << "░░░░░░░░╚══════╝░░░░┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛░hMMMhmN/         :mNyMMMh░░░"<< endl;
+            cout << "░░░░░░░░╚════██╗░░░░┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┓░░hMMMhNm:    `    -mNyMMMh░░░"<< endl;
+            cout << "░░░░░░░░░█████╔╝░░░░┊        A LAUNDRY SIM       ┊░░hMMdmM.  `yNMNh.  .NNhMMh░░░"<< endl;
+            cout << "░░░░░░░░██╔═══╝░░░░░┊    NOW WITH MORE TEDIUM    ┊░░hMMyMm   +MMMMMs   dMyMMh░░░"<< endl;
+            cout << "░░░░░░░░███████╗░░░░┊       by Alec McClure      ┊░░hMMddM-  `sNMNy.  .MNhMMh░░░"<< endl;
+            cout << "░░░░░░░░╚══════╝░░░░┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛░░hMMMhmN/         :mNyMMMh░░░"<< endl;
             cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░hMMMMddNms/---/omMddMMMMh░░░"<< endl;
             cout << "░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░hMMMMMMmdddmmmddddMMMMMMh░░░"<< endl;
             cout << "░░░░░▓▓▓▓▓▓▓▓▓▓ PRESS ENTER TO CONTINUE ▓▓▓▓▓▓▓▓▓▓░░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
@@ -299,7 +300,8 @@ int main()
 
             if (dayCount > 1){
                 //textBuffer1 = "REMAINING LIFESPAN REDUCED BY ONE DAY";}
-                textBuffer1 = "ONE DAY CLOSER TO DEATH";}
+                textBuffer1 = "ONE DAY CLOSER TO DEATH";
+            }
             dayDeclaration << "DAY " << dayCount;
             textBuffer3 = dayDeclaration.str();
             if (dirtyScore < 40) {
@@ -321,14 +323,32 @@ int main()
             menuDisplay(command, textBuffer1, textBuffer2,textBuffer3, textBuffer4, textBuffer5, dirtyScore,cleanScore);
             //cout << "test";
             getline(cin,command);
+
+            if (command == "yolo"){
+                won = true;
+            } else {
+
+                clearBuffer();
+            }
             //cin.ignore();
 
-            clearBuffer();
 
             if (homeInit){
                 currentText = "You awake in a dark and filthy room. The air reeks of stale beer and  you feel the crunch of forgotten potato chips beneath your feet. The  evening light slipping through the sole window illuminates the room   just enough to highlight the soiled clothing surrounding you. This is your bedroom. What does this day hold? Is it \"laundry\"?";
             } else {
                 currentText = "You once again awake in this disheveled mess of a room surrounded by  filthy clothes.";
+                if (won){
+
+                    dirtyScore = 0;
+                    cleanScore = 999;
+                    currentText = "YOU WIN YOU WIN YOU WIN YOU WIN";
+                    textBuffer1 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+                    textBuffer2 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+                    textBuffer3 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+                    textBuffer4 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+                    textBuffer5 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+
+                }
             }
             fillBuffer();
             homeInit = false;
@@ -336,7 +356,6 @@ int main()
             menuDisplay(command, textBuffer1, textBuffer2, textBuffer3, textBuffer4, textBuffer5, dirtyScore, cleanScore);
 
         }
-
 
         if (gameState == 1){ //game state 1 is at home
             cout << "     What shall you do?  ";
@@ -393,6 +412,9 @@ int main()
             else if (command == "sleep" || command == "go to sleep") {
                 currentText =       "You ignore your mounting problems and try to sleep through the day.";
                 actionCount += 4;}
+            else if (command == "yolo" || command == "YOLO"){
+                        won = true;
+        }
             else {
                 if (nagCount == 0) {
                     currentText =       "Are you sure you don't want to do \"laundry\"?";
@@ -663,6 +685,16 @@ int main()
                     currentText = "Just type \"walk home\" and press enter.";}}
             }
 
+        if (won){
+            dirtyScore = 0;
+            cleanScore = 999;
+            currentText = "YOU WIN YOU WIN YOU WIN YOU WIN";
+            textBuffer1 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+            textBuffer2 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+            textBuffer3 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+            textBuffer4 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+            textBuffer5 = "YOU WIN YOU WIN YOU WIN YOU WIN";
+        }
         clearBuffer();
         fillBuffer();
 
