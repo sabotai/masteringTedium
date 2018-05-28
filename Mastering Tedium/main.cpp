@@ -222,7 +222,35 @@ int main()
         }
 
         if (gameState == 0) {
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░v0.82"<< endl;
+            cout << "░░░███╗░░░███╗░█████╗░███████╗████████╗███████╗██████╗░██╗███╗░░░██╗░██████╗░░░░"<< endl;
+            cout << "░░░████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗░░██║██╔════╝░░░░"<< endl;
+            cout << "░░░██╔████╔██║███████║███████╗░░░██║░░░█████╗░░██████╔╝██║██╔██╗░██║██║░░███╗░░░"<< endl;
+            cout << "░░░██║╚██╔╝██║██╔══██║╚════██║░░░██║░░░██╔══╝░░██╔══██╗██║██║╚██╗██║██║░░░██║░░░"<< endl;
+            cout << "░░░██║░╚═╝░██║██║░░██║███████║░░░██║░░░███████╗██║░░██║██║██║░╚████║╚██████╔╝░░░"<< endl;
+            cout << "░░░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝╚═╝░░╚═══╝ ╚═════╝░░░░"<< endl;
+            cout << "░░░████████╗███████╗██████╗░██╗██╗░░░██╗███╗░░░███╗░░░hdmmmyyyyyh////smmmms░░░░░"<< endl;
+            cout << "░░░╚══██╔══╝██╔════╝██╔══██╗██║██║░░░██║████╗ ████║░░░smmmmhhyhhdysyyymmmmo░░░░░"<< endl;
+            cout << "░░░░░░██║░░░█████╗░░██║░░██║██║██║░░░██║██╔████╔██║░░ymMMMMMMMMMMMMMMMMMMMNy░░░░"<< endl;
+            cout << "░░░░░░██║░░░██╔══╝░░██║░░██║██║██║░░░██║██║╚██╔╝██║░odmmmmmmmmmmmmmmmmmmmmmmo░░░"<< endl;
+            cout << "░░░░░░██║░░░███████╗██████╔╝██║╚██████╔╝██║░╚═╝░██║░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
+            cout << "░░░░░░╚═╝░░░╚══════╝╚═════╝░╚═╝░╚═════╝░╚═╝░░░░░╚═╝░hMMMMMMmddddmdddddMMMMMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░hMMMMddNdo:...:odMddMMMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┓░░░░░░░░░hMMMhNm:    `    -mNyMMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░┊        A LAUNDRY SIM       ┊░░░░░░░░░hMMdmM.  `yNMNh.  .NNhMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░┊    NOW WITH MORE TEDIUM    ┊░░░░░░░░░hMMyMm   +MMMMMs   dMyMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░┊       by Juno Morrow       ┊░░░░░░░░░hMMddM-  `sNMNy.  .MNhMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛░░░░░░░░░hMMMhmN/         :mNyMMMh░░░"<< endl;
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░hMMMMddNms/---/omMddMMMMh░░░"<< endl;
+            cout << "░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░hMMMMMMmdddmmmddddMMMMMMh░░░"<< endl;
+            cout << "░░░░░▓▓▓▓▓▓▓▓▓▓ PRESS ENTER TO CONTINUE ▓▓▓▓▓▓▓▓▓▓░░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
+            cout << "░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ymmmmmmmmmmmmmmmmmmmmmmmy░░░"<< endl;
+            cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ymmmmmmmmmmmmmmmmmmmmmmmy░░░";
 
+<<<<<<< HEAD
+/*
+=======
+>>>>>>> 09990137e1c56aaf683f49a10269873d7ca426cb
             cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░v0.82"<< endl;
             cout << "░░░███╗░░░███╗░█████╗░███████╗████████╗███████╗██████╗░██╗███╗░░░██╗░██████╗░░░░"<< endl;
             cout << "░░░████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗░░██║██╔════╝░░░░"<< endl;
@@ -247,7 +275,7 @@ int main()
             cout << "░░░░░▓▓▓▓▓▓▓▓▓▓ PRESS ENTER TO CONTINUE ▓▓▓▓▓▓▓▓▓▓░░hMMMMMMMMMMMMMMMMMMMMMMMh░░░"<< endl;
             cout << "░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ymmmmmmmmmmmmmmmmmmmmmmmy░░░"<< endl;
             cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ymmmmmmmmmmmmmmmmmmmmmmmy░░░";
-/*
+
             cout << "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"<< endl;
             cout << "░░░███╗░░░███╗░█████╗░███████╗████████╗███████╗██████╗░██╗███╗░░░██╗░██████╗░░░░"<< endl;
             cout << "░░░████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██║████╗░░██║██╔════╝░░░░"<< endl;
@@ -395,7 +423,7 @@ int main()
                 currentText =       "I'm glad you're finally cooperating.  Are you trying to say you want  to do \"laundry\"?";
                 actionCount +=2;}
             else if (command == "help") {
-                currentText =       "There's this expression.  \"Every man is an island\" or something like that.  I think that's how it goes.";
+                currentText =       "There's this expression.  \"Every man is an island\" or something like  that.  I think that's how it goes.";
                 actionCount += 2;}
             else if (command == "cry") {
                 currentText =       "There's no crying in baseball.";
@@ -407,7 +435,7 @@ int main()
                 currentText =       "No compass will ever point you in the right direction.";
                 actionCount += 2;}
             else if (command == "run away" || command == "run") {
-                currentText =       "You run in circles for 5 minutes before realizing that you can't outrun your problems.";
+                currentText =       "You run in circles for 5 minutes before realizing that you can't out- run your problems.";
                 actionCount += 2;}
             else if (command == "sleep" || command == "go to sleep") {
                 currentText =       "You ignore your mounting problems and try to sleep through the day.";
@@ -426,7 +454,7 @@ int main()
                     currentText =       "Society looks down upon the various body odors emanating from your    dirty clothing.  Are you sure you don't want to do \"laundry\"?";
                     actionCount +=2;}
                 else if (nagCount == 3) {
-                    currentText =       "Not doing laundry just caused you to lose 3 casual friends, but they  were'nt that interesting anyways.  You can always do \"laundry\" to     attract new ones.";
+                    currentText =       "Not doing laundry just caused you to lose 3 casual friends, but they  weren't that interesting anyways.  You can always do \"laundry\" to     attract new ones.";
                     actionCount +=1;}
                 else if (nagCount == 4) {
                     currentText =       "Your once loyal pet cat no longer cuddles in your lap or comes within 10 feet of your malodorous room.  Do you even want to do \"laundry\"?";
@@ -435,7 +463,7 @@ int main()
                     currentText =       "You notice considerable mildew growth on the underside of one of the  smaller piles of clothing.  Do you even want to do \"laundry\"?";
                     actionCount +=1;}
                 else if (nagCount > 5) {
-                    currentText =       "The putrid smell drifting into the common hallway of your apartment building causes both of your neighbors who have never met to knock on the door and ask \"Are you dead or do you just need to do \"laundry\"?\"";
+                    currentText =       "The putrid smell drifting into the common hallway of your apartment   building causes both of your neighbors who have never met to knock on the door and ask \"Are you dead or do you just need to do \"laundry\"?\"";
                     actionCount +=1;
                     nagCount = 0;}
 
